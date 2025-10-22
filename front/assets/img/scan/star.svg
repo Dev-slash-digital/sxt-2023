@@ -1,0 +1,24 @@
+<svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mask id="mask0_7037_1434" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="51" height="50">
+<path d="M9.15885 21.8106L0.5 45.4169L23.664 39.892L46.151 50L41.2292 25.6153L50.5 3.26469L49.9661 2.69965L26.4635 8.21195C25.3047 7.47112 5.31769 0 5.31769 0L9.15885 21.8106Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_7037_1434)">
+<mask id="mask1_7037_1434" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-515" y="-26" width="775" height="1057">
+<path d="M259.354 -25.2637H-514.083V1030.59H259.354V-25.2637Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_7037_1434)">
+<mask id="mask2_7037_1434" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-22" y="-21" width="95" height="91">
+<path d="M27.7367 -20.5753L-21.1021 22.7783L23.8635 69.8847L72.7023 26.5311L27.7367 -20.5753Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_7037_1434)">
+<rect width="65.1346" height="65.3311" transform="matrix(0.690352 0.723473 -0.747971 0.663732 27.7656 -20.5549)" fill="url(#pattern0_7037_1434)"/>
+</g>
+</g>
+</g>
+<defs>
+<pattern id="pattern0_7037_1434" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_7037_1434" transform="scale(0.25)"/>
+</pattern>
+<image id="image0_7037_1434" width="4" height="4" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsSAAALEgHS3X78AAAAT0lEQVQImQFEALv/Ae5tqP8RPz8AAOvnAOfZ2QADN/cUgCkTEwAAAP8AAf//AAL///8A/Pv7AAD+/gD19fUAAkhISAAEMTEAABgYAO/w7wDmjhwaXNuc1QAAAABJRU5ErkJggg=="/>
+</defs>
+</svg>

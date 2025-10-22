@@ -1,0 +1,39 @@
+$primary: #612346;
+$secondary: #d44b52;
+$error: #de2006;
+
+$above-the-fold-color: #e86364;
+
+$text-color-primary: #030402;
+$text-color-secondary: #f5d0c6;
+
+$font-primary: #a61a25;
+$font-secondary: #f5d0c6;
+$font-tertiary: #a61a25;
+
+$link-color-primary: #a61a25;
+$link-color-secondary: #e86364;
+
+$register-button-text: #f4007c;
+$register-button-bg: #f5d0c6;
+
+$yellow-tree-lines: #a61a25;
+
+$font-size-small: 16px;
+$font-size-small-mobile: 16px;
+$font-size-medium: 22px;
+$font-size-medium-mobile: 18px;
+$font-size-large: 42px;
+$font-size-large-mobile: 32px;
+
+$max-width-lg: 1200px;
+$max-width-md: 1050px;
+$max-width-sm: 930px;
+$default-breakpoint: 767px;
+$max-width-seven-colum-row-elements: 1210px;
+$mobile-width: 460px;
+
+@mixin x-padding() {
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,63 @@
+version: 1
+
+env:
+    base:
+        BASE_URL:
+            meta: url
+        ENVIRONMENT:
+            meta: env
+    api:
+        SECRET_KEY:
+            secret: secret_key
+        DATABASE_URL:
+            component: psql
+            attribute: url
+        SENTRY_DSN:
+            config: sentry_dsn_api
+        EMAIL_MODE:
+            config: email_mode
+        MANDRILL_API_KEY:
+            secret: mandrill_api_key
+    front:
+        SENTRY_DSN:
+            config: sentry_dsn_front
+        NUXT_API_URL:
+            component: api
+            attribute: url
+        NUXT_PROXY_OPTIONS_TARGET:
+            component: api
+            attribute: url
+        NUXT_PUBLIC_BASE_URL:
+            meta: url
+
+images:
+    api:
+        type: build
+    front:
+        type: build
+
+components:
+    psql:
+        type: postgresql
+
+    api:
+        type: http-server
+        image: api
+        port: 8000
+        env: [base, api]
+        prefixes:
+            - "/back"
+
+    front:
+        type: http-server
+        image: front
+        port: 3000
+        env: [base, front]
+        prefixes:
+            - "/"
+
+    migrate:
+        type: pre-deploy
+        image: api
+        env: [base, api]
+        command: ["modelw-docker", "run", "./manage.py", "migrate"]

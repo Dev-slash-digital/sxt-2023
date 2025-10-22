@@ -1,0 +1,114 @@
+[
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Aquazzura",
+            "slug": "aquazzura",
+            "postal_address": "GALERIA CANALEJAS Pl. de Canalejas, 1, 28014 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Cartier",
+            "slug": "cartier",
+            "postal_address": "GALERIA CANALEJAS Pl. de Canalejas, 1, 28014 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Chaumet",
+            "slug": "chaumet",
+            "postal_address": "C. de José Ortega y Gasset, 13, 28006 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Chopard",
+            "slug": "chopard",
+            "postal_address": "C. de Serrano, 51, 28006 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Giorgio Armani",
+            "slug": "giorgio",
+            "postal_address": "GALERIA CANALEJAS Pl. de Canalejas, 1, 28014 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Hermès",
+            "slug": "hermes",
+            "postal_address": "GALERIA CANALEJAS Pl. de Canalejas, 1, 28014 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "IWC",
+            "slug": "iwc",
+            "postal_address": "C. de José Ortega y Gasset, 15, 28006 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Jaeger Lecoultre",
+            "slug": "jaeger",
+            "postal_address": "C. de José Ortega y Gasset, 11, 28006 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Loewe",
+            "slug": "loewe",
+            "postal_address": "C. de Serrano, 34, 28001 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Maison Valmont",
+            "slug": "maison",
+            "postal_address": "C. de Jorge Juan, 13, 28001 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Nuba",
+            "slug": "nuba",
+            "postal_address": "C. de Serrano, 96, 28006 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Omega",
+            "slug": "omega",
+            "postal_address": "C. de José Ortega y Gasset, 6, 28006 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Stefano Ricci",
+            "slug": "stefano",
+            "postal_address": "GALERIA CANALEJAS Pl. de Canalejas, 1, 28014 Madrid"
+        }
+    },
+    {
+        "model": "sxt2023_api.brand",
+        "fields": {
+            "name": "Ze García",
+            "slug": "ze",
+            "postal_address": "Callejón de Jorge Juan, 12E, 28001 Madrid"
+        }
+    }
+]

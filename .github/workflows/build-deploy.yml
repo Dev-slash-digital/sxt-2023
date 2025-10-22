@@ -1,0 +1,72 @@
+name: Build and deploy
+'on':
+  push:
+    branches:
+    - develop
+    - master
+    - feature/*
+jobs:
+  build-api:
+    needs:
+    - prepare
+    uses: ./.github/workflows/build-component.yml
+    with:
+      name: sxt-2023
+      env_group: ${{ github.ref == 'refs/heads/master' && 'prod' || 'dev' }}
+      env: ${{ needs.prepare.outputs.domain_prefix || github.ref_name }}
+      component: api
+      registry_ns: ${{ github.ref == 'refs/heads/master' && vars.REGISTRY_NS_PROD
+        || vars.REGISTRY_NS_DEV }}
+    secrets:
+      do_token: ${{ github.ref == 'refs/heads/master' && secrets.DO_TOKEN_PROD ||
+        secrets.DO_TOKEN_DEV }}
+  build-front:
+    needs:
+    - prepare
+    uses: ./.github/workflows/build-component.yml
+    with:
+      name: sxt-2023
+      env_group: ${{ github.ref == 'refs/heads/master' && 'prod' || 'dev' }}
+      env: ${{ needs.prepare.outputs.domain_prefix || github.ref_name }}
+      component: front
+      registry_ns: ${{ github.ref == 'refs/heads/master' && vars.REGISTRY_NS_PROD
+        || vars.REGISTRY_NS_DEV }}
+    secrets:
+      do_token: ${{ github.ref == 'refs/heads/master' && secrets.DO_TOKEN_PROD ||
+        secrets.DO_TOKEN_DEV }}
+  deploy:
+    needs:
+    - build-api
+    - build-front
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git checkout
+      uses: actions/checkout@v3
+    - name: Deploy to cloud
+      uses: Xowap/121gw@develop
+      with:
+        endpoint: ${{ vars.FLUX_CAPACITOR_ENDPOINT }}
+        token: ${{ secrets.FLUX_CAPACITOR_TOKEN }}
+  prepare:
+    runs-on: ubuntu-latest
+    env:
+      FLUX_CAPACITOR_ENDPOINT: ${{ vars.FLUX_CAPACITOR_ENDPOINT }}
+      FLUX_CAPACITOR_TOKEN: ${{ secrets.FLUX_CAPACITOR_TOKEN }}
+    steps:
+    - name: Install curl and jq
+      run: sudo apt update && sudo apt-get install -y curl jq
+      if: github.ref != 'refs/heads/master' && github.ref != 'refs/heads/develop'
+    - name: Sanitize FLUX_CAPACITOR_ENDPOINT
+      run: echo FLUX_CAPACITOR_ENDPOINT=$(echo $FLUX_CAPACITOR_ENDPOINT | sed 's:/$::')
+        >> $GITHUB_ENV
+    - name: Get domain prefix from API
+      id: get_domain_prefix
+      if: github.ref != 'refs/heads/master' && github.ref != 'refs/heads/develop'
+      run: 'set -xe
+
+        response=$(curl -s -H "X-FluxCapacitor-Token: $FLUX_CAPACITOR_TOKEN" "$FLUX_CAPACITOR_ENDPOINT/back/api/ticket/${{
+        github.ref_name }}/" | jq -r .domain_prefix)
+
+        echo "domain_prefix=$response" >> $GITHUB_ENV'
+    outputs:
+      domain_prefix: ${{ env.domain_prefix }}

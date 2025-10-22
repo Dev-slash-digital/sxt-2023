@@ -1,0 +1,163 @@
+<mjml>
+  <mj-head>
+    <mj-title>Solidarity XMAS Tree 2024</mj-title>
+    <mj-attributes>
+      <mj-text padding="0" />
+      <mj-class name="font_bold" letter-spacing="0.02em" font-size="14px" font-weight="500" color="#030402" align="center" line-height="1.5" />
+      <mj-class name="font_normal" letter-spacing="0.32px" font-size="16px" color="#030402" line-height="22px" align="center" />
+      <mj-class name="font_small" font-size="10px" color="#030402" line-height="1.25" align="center" />
+      <mj-class name="font_footer" letter-spacing="0.32px" font-size="16px" color="#fff" line-height="22px" align="center" />
+      <mj-class name="font_footer_small" font-size="10px" color="#fff" line-height="14px" align="center" />
+      <mj-font name="Playfair Display" href="https://fonts.googleapis.com/css2?family=Playfair+Display" />
+      <mj-font name="Roboto" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500" />
+      <mj-all font-family="Roboto, Tahoma, sans-serif" font-weight="300"></mj-all>
+    </mj-attributes>
+    <mj-raw>
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+  </mj-head>
+  <mj-body background-color="white">
+    <!--- {% load wailer %} -->
+    <mj-section padding="0" background-url="/back/static/mails/background.png">
+      <mj-column width="100%" padding="100px 0 80px 0">
+        <mj-image src="/back/static/mails/x2/header.png" alt="logo xmas tree 2024" height="200px" width="164.812px" padding="0" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" padding-left="5px" padding-right="5px">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/enhorabuena.png" alt="enhorabuena, se ha registrado con éxito" width="660px" padding="0" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-text padding="0 10% 0 10%" mj-class="font_normal" align="center">
+          El árbol de Navidad solidario de {{ brand }} estará expuesto {{ address }} del 19 al 25 de noviembre dentro de la Ruta Solidarity Xmas Tree
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/tree-divider.png" alt="divider" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/trees.png" alt="imagen del mapa" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/people.png" alt="people" width="70px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/hagala.png" alt="haga la ruta" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/valide1.png" alt="valide" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/valide2.png" alt="con 7 arboles" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/hotel.png" alt="hotel" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/disfrute.png" alt="disfrute" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-text padding="0 10% 0 10%" mj-class="font_normal" font-family="Playfair Display" align="center">
+          <a style="
+                            font-size: 16px;
+                            line-height: 22px;
+                            text-align: center;
+                            color: #030402;
+                            letter-spacing: 0.32px;
+                        " href="https://www.solidarityxmastree.com/conditions" target="_blank">Términos y condiciones del sorteo</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/tree-divider.png" alt="divider" width="480px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/header.png" alt="logo xmas tree 2023" height="200px" width="164.812px" padding="0" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-image src="/back/static/mails/x2/masinfo.png" alt="logo xmas tree 2023" alt="informacion" width="200px" align="center" />
+      </mj-column>
+    </mj-section>
+    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+      <mj-column width="100%">
+        <mj-text mj-class="font_normal" font-family="Playfair Display" align="center">
+          <a style="
+                            font-size: 16px;
+                            line-height: 22px;
+                            text-align: center;
+                            color: #030402;
+                            letter-spacing: 0.32px;
+                        " href="http://www.solidarityxmastree.com" target="_blank">www.solidarityxmastree.com</a>
+        </mj-text>
+        <mj-text padding="4px 0 0 0" mj-class="font_normal" font-family="Playfair Display" align="center">
+          <span style="
+                            font-size: 16px;
+                            line-height: 22px;
+                            text-align: center;
+                            letter-spacing: 0.32px;
+                            text-decoration: underline;
+                            color: #030402;
+                        ">
+            info@togetherplus.es
+          </span>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0 25px 24px 25px" background-color="#612346">
+      <mj-column width="100%" padding="0">
+        <mj-image src="/back/static/mails/x2/siganos.png" alt="siganos" width="281px" padding="32px 0 0 0" align="center" />
+        <mj-image href="https://www.instagram.com/solidarityxmastree/" src="/back/static/mails/x2/instagram.png" alt="instagram" width="30px" padding="8px 0 0 0" align="center" />
+        <mj-divider padding="23px 0 23px 0" border-color="#E0E0E0" border-width="1px"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0" background-color="#612346">
+      <mj-column width="100%" padding="0">
+        <mj-text padding="0 10px 0 10px" mj-class="font_footer_small">
+          <span style="font-weight: 500; font-size=12px;">
+            Solidarity Xmas Tree
+          </span>
+          is a registrated idea and brand owned by TogetherPlus, S.L.
+          All Rights Reserved.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section text-align="center" padding="0 0 24px 0" background-color="#612346">
+      <mj-group width="50%" vertical-align="middle">
+        <mj-column width="80%">
+          <mj-text padding="16px 0 0 0" mj-class="font_footer_small">Partner tecnológico:
+            <a href="https://with-madrid.com/" target="_blank" style="color: #fff">www.with-madrid.com</a>
+          </mj-text>
+        </mj-column>
+        <mj-column width="20%" padding="16px 0 0 0">
+          <mj-image href="https://www.instagram.com/solidarityxmastree/" src="/back/static/mails/x2/with.png" alt="withlogo" width="36px" padding="0" align="left" />
+        </mj-column>
+      </mj-group>
+    </mj-section>
+  </mj-body>
+</mjml>

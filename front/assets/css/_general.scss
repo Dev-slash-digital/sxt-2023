@@ -1,0 +1,69 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Scroll anchor with offset to avoid being under menu
+.scroll-anchor {
+    position: relative;
+    top: -120px;
+}
+
+body {
+    font-family: "FS Siena", sans-serif;
+    line-height: 1.5;
+    color: $text-color-primary;
+    background-color: white;
+    background-image: url("~/assets/img/background-noise.png");
+    background-blend-mode: hard-light;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.wsnw {
+    white-space: nowrap;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.loading-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.loading-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loading-dual-ring 1.2s linear infinite;
+}

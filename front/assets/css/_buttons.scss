@@ -1,0 +1,157 @@
+a.btn {
+    text-decoration: none;
+}
+
+.btn {
+    white-space: nowrap;
+    transition: 0.3s all;
+    padding-right: 0;
+    padding-left: 0;
+    &:not(:disabled):not(.disabled) {
+        cursor: pointer;
+    }
+
+    &-secondary,
+    &-primary {
+        font-size: 14px;
+        line-height: 15px;
+        text-transform: uppercase;
+        padding-bottom: 8px;
+        background-color: transparent;
+        border: none;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        .arrow {
+            transition: 0.3s fill;
+        }
+    }
+
+    &-secondary {
+        color: $secondary;
+        border-bottom: 1px solid $secondary;
+
+        .arrow {
+            fill: $secondary;
+        }
+
+        &:hover {
+            color: $primary;
+            border-bottom-color: $primary;
+        }
+
+        &:hover .arrow {
+            fill: $primary !important;
+        }
+    }
+
+    &-primary {
+        color: $primary;
+        border-bottom: 1px solid $primary;
+
+        .arrow {
+            fill: $primary;
+        }
+
+        &:hover {
+            color: $secondary;
+            border-bottom-color: $secondary;
+        }
+
+        &:hover .arrow {
+            fill: $secondary !important;
+        }
+    }
+
+    &-round {
+        display: inline-block;
+        $s: 30px;
+        height: $s;
+        width: $s;
+        border-radius: $s;
+        line-height: $s * 1.35;
+        text-align: center;
+
+        &-primary {
+            background-color: $primary;
+
+            &:hover {
+                background-color: $secondary;
+            }
+        }
+    }
+
+    svg.arrow {
+        margin-left: 3px;
+    }
+
+    &-outline-round {
+        cursor: pointer;
+        display: inline-block;
+        border: 1px solid $secondary;
+        color: $primary;
+        background-color: transparent;
+        $s: 20px;
+        border-radius: $s;
+        line-height: $s * 0.9;
+        width: $s;
+        height: $s;
+        font-weight: bold;
+        font-size: 17px;
+        text-align: center;
+
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $primary;
+    background: transparent;
+    padding: 8px 0;
+    transition: 0.3s all;
+    color: $primary;
+
+    &:focus {
+        border-bottom-color: $secondary;
+    }
+    &:focus-visible {
+        outline: -webkit-focus-ring-color auto 0;
+    }
+    &.has-error {
+        border-bottom-color: #de2006;
+    }
+}
+input[type="email"]::-webkit-input-placeholder {
+    color: $text-color-primary;
+}
+input[type="email"]::-moz-placeholder {
+    color: $text-color-primary;
+}
+input[type="email"]::-ms-placeholder {
+    color: $text-color-primary;
+}
+input[type="email"]::placeholder {
+    color: $text-color-primary;
+}
+
+.label-checkbox {
+    display: flex;
+    text-align: left;
+    padding: 4px 0;
+
+    > div:first-of-type {
+        margin-right: 8px;
+        margin-top: 4px;
+    }
+}
+
+div.form-error {
+    margin-top: 4px;
+    color: #de2006;
+    text-align: left;
+    font-style: italic;
+}
