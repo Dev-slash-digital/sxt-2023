@@ -35,6 +35,23 @@ else:
     # Default: allow common hosts
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'solidarityxmastree.com', 'www.solidarityxmastree.com', 'sxt2025.slash-digital.io', '72.61.165.170']
 
+# CSRF Configuration
+CSRF_TRUSTED_ORIGINS = [
+    'http://127.0.0.1:3000',
+    'http://localhost:3000',
+    'http://sxt2025.slash-digital.io',
+    'https://sxt2025.slash-digital.io',
+    'http://solidarityxmastree.com',
+    'https://solidarityxmastree.com',
+    'https://www.solidarityxmastree.com',
+]
+
+# Session and Cookie settings
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
+SESSION_COOKIE_SAMESITE = 'Lax'
+CSRF_COOKIE_SAMESITE = 'Lax'
+
 # ---
 # Database
 # ---
