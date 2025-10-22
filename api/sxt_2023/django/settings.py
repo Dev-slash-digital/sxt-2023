@@ -26,29 +26,54 @@ def get_package_version() -> str:
 
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 SECRET_KEY = os.getenv('SECRET_KEY', 'NYigVbGuYrwal4SJmh4DvDwsCweshmsb4lxzKWCkpZol9uiYw86zRX')
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+
+# Allow all hosts in production/staging, or use specific hosts from env
+ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS', '')
+if ALLOWED_HOSTS_ENV:
+    ALLOWED_HOSTS = ALLOWED_HOSTS_ENV.split(',')
+else:
+    # Default: allow common hosts
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'solidarityxmastree.com', 'www.solidarityxmastree.com', 'sxt2025.slash-digital.io', '72.61.165.170']
 
 # ---
 # Database
 # ---
-DATABASES = {
-    'default': {
-        'ENGINE': 'psqlextra.backend',
-        'NAME': os.getenv('DB_NAME', 'sxt_2023'),
-        'USER': os.getenv('DB_USER', 'sxt_2023'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'sxt_2023'),
-        'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_PORT', '5432'),
-    }
-}
 
-# DATABASE_URL support commented out - dj_database_url not installed
-# If needed, add "dj-database-url" to pyproject.toml dependencies
-# DATABASE_URL = os.getenv('DATABASE_URL')
-# if DATABASE_URL:
-#     import dj_database_url
-#     DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
-#     DATABASES['default']['ENGINE'] = 'psqlextra.backend'
+# Support both DATABASE_URL and individual DB_* variables
+DATABASE_URL = os.getenv('DATABASE_URL')
+
+if DATABASE_URL:
+    # If DATABASE_URL is provided, use it (Docker/Production)
+    try:
+        import dj_database_url
+        DATABASES = {
+            'default': dj_database_url.parse(DATABASE_URL)
+        }
+        DATABASES['default']['ENGINE'] = 'psqlextra.backend'
+    except ImportError:
+        # Fallback if dj_database_url is not installed
+        DATABASES = {
+            'default': {
+                'ENGINE': 'psqlextra.backend',
+                'NAME': os.getenv('DB_NAME', 'sxt_2023'),
+                'USER': os.getenv('DB_USER', 'sxt_2023'),
+                'PASSWORD': os.getenv('DB_PASSWORD', 'sxt_2023'),
+                'HOST': os.getenv('DB_HOST', 'localhost'),
+                'PORT': os.getenv('DB_PORT', '5432'),
+            }
+        }
+else:
+    # Use individual variables (Development)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'psqlextra.backend',
+            'NAME': os.getenv('DB_NAME', 'sxt_2023'),
+            'USER': os.getenv('DB_USER', 'sxt_2023'),
+            'PASSWORD': os.getenv('DB_PASSWORD', 'sxt_2023'),
+            'HOST': os.getenv('DB_HOST', 'localhost'),
+            'PORT': os.getenv('DB_PORT', '5432'),
+        }
+    }
 
 # ---
 # Apps
