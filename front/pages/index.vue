@@ -11,7 +11,7 @@
                 <span style="font-style: italic">crean</span> ÁRBOLES DE NAVIDAD
                 ÚNICOS <span style="font-style: italic">y</span> EXCLUSIVOS
                 <span style="font-style: italic">que se </span>SUBASTAN A FAVOR
-                DE DOS FUNDACIONES BENÉFICAS
+                DE TRES FUNDACIONES BENÉFICAS
             </p>
             <div class="trees-carousel">
                 <div class="trees-carousel--header">

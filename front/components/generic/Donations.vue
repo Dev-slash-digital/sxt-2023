@@ -7,7 +7,7 @@
                     style="font-style: italic">el</span> MUNDO. UNA DE ELLAS ES CREER EN EL POTENCIAL <span
                     style="font-style: italic">de</span> QUIENES SOLO NECESITAN UNA OPORTUNIDAD.
                 <br><br>
-                EL 25 DE NOVIEMBRE <span style="font-style: italic">los</span> ÁRBOLES SERÁM SUBASTADOS A BENEFICIO
+                EL 25 DE NOVIEMBRE <span style="font-style: italic">los</span> ÁRBOLES SERÁN SUBASTADOS A BENEFICIO
                 <span style="font-style: italic">de</span>:
             </p>
             <div class="videos" style="display:none;">
@@ -36,6 +36,9 @@
                                 <span style="font-weight: 500">CONCEPTO</span>
                                 DONACIÓN SOLIDARITY XMAS TREE FUNDACIÓN TACUMI
                             </p>
+                            <p style="text-transform: uppercase;">
+                                Si lo desea puede hacer una donación mediante transferencia bancaria.
+                            </p>
                         </div>
                         <p class="friends-description">
                             Promueve la integración plena de niños con discapacidad intelectual en centros educativos
@@ -61,6 +64,9 @@
                             <p>
                                 <span style="font-weight: 500">CONCEPTO</span>
                                 DONACÓN SOLIDARITY XMAS TREE FUNDACIÓN DÁDORIS
+                            </p>
+                            <p style="text-transform: uppercase;">
+                                Si lo desea puede hacer una donación mediante transferencia bancaria.
                             </p>
                         </div>
                         <p class="friends-description">
@@ -88,6 +94,9 @@
                             <p>
                                 <span style="font-weight: 500">CONCEPTO</span>
                                 DONACÓN SOLIDARITY XMAS TREE FUNDACIÓN ALAS
+                            </p>
+                            <p style="text-transform: uppercase;">
+                                Si lo desea puede hacer una donación mediante transferencia bancaria.
                             </p>
                         </div>
                         <p class="friends-description">
@@ -245,6 +254,13 @@ import Videos from "./Videos.vue";
                         height: auto;
                         object-fit: contain;
                     }
+                }
+
+                .friends-info{
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    gap: 8px;
                 }
 
                 .friends-text {
