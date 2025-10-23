@@ -55,5 +55,17 @@ export default {
     css: ["~/assets/css/main.scss"],
     nitro: {
         compressPublicAssets: true,
+        publicAssets: [
+            {
+                baseURL: '/img',
+                dir: 'public/img',
+                maxAge: 60 * 60 * 24 * 7 // 7 days
+            }
+        ]
     },
+    router: {
+        options: {
+            strict: false
+        }
+    }
 };
