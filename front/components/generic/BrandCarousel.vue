@@ -18,7 +18,6 @@ const brands = [
     ["/img/brands/giorgio-armani.svg", ""],
     ["/img/brands/hermes.svg", ""],
     ["/img/brands/iwc.svg", ""],
-    ["/img/brands/Galeria.svg", ""],
     ["/img/brands/JLC.svg", ""],
     ["/img/brands/loewe.svg", ""],
     ["/img/brands/Valmont.svg", ""],
