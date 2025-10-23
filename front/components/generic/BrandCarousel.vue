@@ -18,14 +18,14 @@ const brands = [
     ["/img/brands/giorgio-armani.svg", ""],
     ["/img/brands/hermes.svg", ""],
     ["/img/brands/iwc.svg", ""],
-    ["/img/brands/galeria.svg", ""],
-    ["/img/brands/jlc.svg", ""],
-    ["/img/brands/ralph-lauren.svg", ""],
+    ["/img/brands/Galeria.svg", ""],
+    ["/img/brands/JLC.svg", ""],
+    ["/img/brands/Ralph-Lauren.svg", ""],
     ["/img/brands/stefano.svg", ""],
     ["/img/brands/suarez.svg", ""],
-    ["/img/brands/tod.svg", ""],
-    ["/img/brands/valmont.svg", ""],
-    ["/img/brands/zimmermann.svg", ""],
+    ["/img/brands/TOD.svg", ""],
+    ["/img/brands/Valmont.svg", ""],
+    ["/img/brands/Zimmermann.svg", ""],
 ];
 
 import CustomCarousel from "/components/CustomCarousel.vue";
