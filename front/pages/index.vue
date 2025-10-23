@@ -37,7 +37,7 @@
                     MARCAS PARTICIPANTES FORMANDO LA RUTA SOLIDARITY XMAS TREE
                 </p>
             </div>
-            <div class="map-container" style="display:none;">
+            <div class="map-container">
                 <img class="map-trees" src="~/assets/img/maps/trees.svg" />
             </div>
         </div>
@@ -251,9 +251,7 @@ p {
             align-items: center;
             justify-content: center;
             width: 100%;
-            background: rgb(232, 100, 100);
-            background: linear-gradient(rgba(232, 100, 100, 1) 3%,
-                    rgba(159, 8, 29, 1) 100%);
+            background: #088296;
             padding: 109px 0 88px 0;
             gap: 100px;
 
