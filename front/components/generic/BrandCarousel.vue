@@ -12,20 +12,20 @@
 
 <script setup>
 const brands = [
-    ["/img/brands/cartier.svg", ""],
-    ["/img/brands/chaumet.svg", ""],
-    ["/img/brands/chopard.svg", ""],
-    ["/img/brands/giorgio.svg", ""],
-    ["/img/brands/hermes.svg", ""],
-    ["/img/brands/iwc.svg", ""],
-    ["/img/brands/jaeger.svg", ""],
-    ["/img/brands/loewe.svg", ""],
-    ["/img/brands/maison.svg", ""],
-    ["/img/brands/nuba.svg", ""],
-    ["/img/brands/omega.svg", ""],
-    ["/img/brands/stefano.svg", ""],
-    ["/img/brands/suarez.svg", ""],
-    ["/img/brands/ze.svg", ""],
+    ["/img/brands/Cartier.svg", ""],
+    ["/img/brands/Chaumet.svg", ""],
+    ["/img/brands/Chopard.svg", ""],
+    ["/img/brands/Giorgio-armani.svg", ""],
+    ["/img/brands/Hermes.svg", ""],
+    ["/img/brands/IWC.svg", ""],
+    ["/img/brands/Galeria.svg", ""],
+    ["/img/brands/JLC.svg", ""],
+    ["/img/brands/Ralph-lauren.svg", ""],
+    ["/img/brands/Stefano.svg", ""],
+    ["/img/brands/Suarez.svg", ""],
+    ["/img/brands/TOD.svg", ""],
+    ["/img/brands/Valmont.svg", ""],
+    ["/img/brands/Zimmermann.svg", ""],
 ];
 
 import CustomCarousel from "/components/CustomCarousel.vue";
