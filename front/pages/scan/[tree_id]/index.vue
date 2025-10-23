@@ -347,7 +347,7 @@ useHead({
             }
         }
 
-        .info-map {
+        .info-map { //cambio temporal
             display: flex;
             width: 100%;
             flex-direction: column;
