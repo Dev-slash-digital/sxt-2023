@@ -1,23 +1,21 @@
 <template>
     <div class="donations-container">
         <div class="donations-videos">
-            <SmallTree
-                id="foundations"
-                class="donations-smalltree"
-                style="margin: 0 auto"
-            ></SmallTree>
+            <SmallTree id="foundations" class="donations-smalltree" style="margin: 0 auto"></SmallTree>
             <p style="margin-top: 40px">
-                EL 26 DE NOVIEMBRE
-                <span style="font-style: italic">los</span> ARBOLES SERÁN
-                SUBASTADOS A BENEFICIO
-                <span style="font-style: italic">de:</span>
+                HAY MUCHAS FORMAS <span style="font-style: italic">de</span> CAMBIAR <span
+                    style="font-style: italic">el</span> MUNDO. UNA DE ELLAS ES CREER EN EL POTENCIAL <span
+                    style="font-style: italic">de</span> QUIENES SOLO NECESITAN UNA OPORTUNIDAD.
+                <br><br>
+                EL 25 DE NOVIEMBRE <span style="font-style: italic">los</span> ÁRBOLES SERÁM SUBASTADOS A BENEFICIO
+                <span style="font-style: italic">de</span>:
             </p>
-            <div class="videos">
+            <div class="videos" style="display:none;">
                 <Videos></Videos>
             </div>
         </div>
         <div class="donations-info">
-            <div class="donations-header">
+            <div class="donations-header" style="display:none;">
                 <p>
                     SI LO DESEA PUEDE HACER UNA DONACIÓN MEDIANTE TRANSFERENCIA
                     BANCARIA
@@ -26,78 +24,80 @@
             <div class="foundations">
                 <div class="friends">
                     <div class="friends-image">
-                        <img
-                            src="~/assets/img/foundations/friends.png"
-                            width="121"
-                            height="51"
-                        />
+                        <img src="~/assets/img/foundations/fundacion-tacumi.svg" width="121" height="51" />
                     </div>
                     <div class="friends-text">
-                        <h4>GRANDES AMIGOS</h4>
+                        <h4>Fundación Tacumi</h4>
                         <div class="friends-info">
                             <p>
-                                <span style="font-weight: 500">IBAN</span> ES06
-                                2080 1600 0530 4001 3111
+                                <span style="font-weight: 500">IBAN</span> ES08 2080 1600 0130 4001 8218
                             </p>
                             <p>
                                 <span style="font-weight: 500">CONCEPTO</span>
-                                DONACIÓN SOLIDARITY XMAS TREE GRANDES AMIGOS
+                                DONACIÓN SOLIDARITY XMAS TREE FUNDACIÓN TACUMI
                             </p>
                         </div>
                         <p class="friends-description">
-                            Grandes Amigos se basa en el voluntariado. Desde
-                            2003, previene y aborda la soledad de las personas
-                            mayores mediante diferentes programas de
-                            acompañamiento y socialización, creando vínculos de
-                            vecindad, apoyo mutuo y amistad
+                            Promueve la integración plena de niños con discapacidad intelectual en centros educativos
+                            ordinarios, trabajando con el alumnado, las familias y los colegios. Con el proyecto “Aulas
+                            Itinerantes”, profesionales especializados trabajan dentro del aula ordinaria, al lado del
+                            alumno con necesidades específicas y junto al resto de compañeros, para brindarle todo el
+                            apoyo educativo necesario.
                         </p>
-                        <Link
-                            :href="'https://www.instagram.com/grandes_amigos/'"
-                            class="friends-text-link"
-                            >MÁS INFORMACIÓN GRANDES AMIGOS</Link
-                        >
+                        <Link :href="'https://fundaciontacumi.org/'" class="friends-text-link">más información Fundación
+                        Tacumi</Link>
                     </div>
                 </div>
-                <div class="mothers">
-                    <div class="mothers-image">
-                        <img
-                            src="~/assets/img/foundations/mothers.png"
-                            width="174"
-                            height="16"
-                        />
+                <div class="friends">
+                    <div class="friends-image">
+                        <img src="~/assets/img/foundations/fundacion-dadoris.svg" width="121" height="51" />
                     </div>
-                    <div class="mothers-text">
-                        <h4>MAMÁS EN ACCIÓN</h4>
-                        <div>
+                    <div class="friends-text">
+                        <h4>Fundación Dádoris</h4>
+                        <div class="friends-info">
                             <p>
-                                <span style="font-weight: 500">IBAN</span> ES69
-                                2080 1600 0530 4001 3335
+                                <span style="font-weight: 500">IBAN</span> ES13 2080 1600 0430 4001 8466
                             </p>
                             <p>
                                 <span style="font-weight: 500">CONCEPTO</span>
-                                DONACIÓN SOLIDARITY XMAS TREE PROYECTO MAMÁS EN
-                                ACCIÓN
+                                DONACÓN SOLIDARITY XMAS TREE FUNDACIÓN DÁDORIS
                             </p>
                         </div>
-                        <p
-                            class="mothers-description"
-                            style="margin-top: 0.5em"
-                        >
-                            En 2013 Majo Gimeno, fundadora de Mamás en Acción,
-                            vio en un hospital a un niño pequeño enfermo
-                            ingresado y solo y descubrió que esa era una
-                            realidad que afecta a miles de niños en España. Majo
-                            pensó que podía hacer algo por esos niños y así
-                            nació Mamás en Acción. Mamás en Acción está formada
-                            por más de 2.500 voluntarios, hombres y mujeres, que
-                            acompañan y dan “amor maternal” a los niños
-                            hospitalizados que están solos.
+                        <p class="friends-description">
+                            La Fundación Dadoris apoya a jóvenes que han obtenido excelentes resultados en bachillerato,
+                            pero no tienen recursos económicos suficientes para acceder a estudios universitarios porque
+                            pertenecen a familias que viven bajo el umbral de pobreza 1, el más bajo en nuestro país.
+                            Mediante premios económicos, estos estudiantes pueden cubrir los gastos derivados de sus
+                            estudios universitarios, y de cursos de idiomas y otras actividades complementarias para su
+                            formación.
                         </p>
-                        <Link
-                            :href="'https://www.instagram.com/mamasenacciones/'"
-                            class="mothers-text-link"
-                            >MÁS INFORMACIÓN FUNDACIÓN MAMÁS EN ACCIÓN</Link
-                        >
+                        <Link :href="'https://fundaciondadoris.org/'" class="friends-text-link">más información
+                        Fundación Dádoris</Link>
+                    </div>
+                </div>
+                <div class="friends">
+                    <div class="friends-image">
+                        <img src="~/assets/img/foundations/fundacion-alas.svg" width="121" height="51" />
+                    </div>
+                    <div class="friends-text">
+                        <h4>Fundación Alas</h4>
+                        <div class="friends-info">
+                            <p>
+                                <span style="font-weight: 500">IBAN</span> ES37 2080 1600 0830 4001 8226
+                            </p>
+                            <p>
+                                <span style="font-weight: 500">CONCEPTO</span>
+                                DONACÓN SOLIDARITY XMAS TREE FUNDACIÓN ALAS
+                            </p>
+                        </div>
+                        <p class="friends-description">
+                            A través de diversos proyectos y recursos: hogares y viviendas tuteladas, formación
+                            académica y ocupacional y formación en actividades cotidianas del día a día, acompañan a
+                            personas adultas con discapacidad intelectual para que puedan llegar a lo más autónomas
+                            posibles dentro de sus posibilidades, ayudándoles a tener un vida digna, segura y feliz.
+                        </p>
+                        <Link :href="'https://alasmadrid.org/'" class="friends-text-link">más información Fundación Alas
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -112,6 +112,7 @@ import Videos from "./Videos.vue";
 </script>
 <style lang="scss" scoped>
 @import "assets/css/variables";
+
 .donations-container {
     display: flex;
     flex-direction: column;
@@ -125,13 +126,14 @@ import Videos from "./Videos.vue";
         align-items: center;
 
         width: 100%;
+
         p {
             margin: 0;
             font-weight: 250;
             font-size: $font-size-large;
             font-style: normal;
             line-height: 44px;
-            width: 840px;
+            width: 900px;
 
             @media (max-width: $default-breakpoint) {
                 width: 100%;
@@ -143,9 +145,10 @@ import Videos from "./Videos.vue";
         }
 
         .videos {
-            width: 840px;
+            width: 900px;
             margin-bottom: 100px;
             margin-top: 40px;
+
             @media (max-width: $default-breakpoint) {
                 width: 100%;
                 margin-bottom: 66px;
@@ -158,7 +161,9 @@ import Videos from "./Videos.vue";
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
         width: 100%;
+        margin-top: 100px;
 
         @media (max-width: $default-breakpoint) {
             text-align: center;
@@ -177,7 +182,8 @@ import Videos from "./Videos.vue";
             p {
                 font-size: $font-size-medium;
                 font-weight: 300;
-                line-height: 30px; /* 136.364% */
+                line-height: 30px;
+                /* 136.364% */
                 letter-spacing: 1.76px;
                 width: 80%;
                 margin-bottom: 70px;
@@ -187,7 +193,8 @@ import Videos from "./Videos.vue";
                     font-size: $font-size-medium-mobile;
                     font-style: normal;
                     font-weight: 300;
-                    line-height: 24px; /* 133.333% */
+                    line-height: 24px;
+                    /* 133.333% */
                     letter-spacing: 1.44px;
 
                     margin-left: auto;
@@ -199,12 +206,10 @@ import Videos from "./Videos.vue";
         .foundations {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-left: 30%;
-            margin-right: 10%;
+            justify-content: space-between;
+            align-items: start;
             gap: 3em;
-            width: 748px;
+            width: 900px;
 
             @media (max-width: $default-breakpoint) {
                 margin: 0;
@@ -213,10 +218,10 @@ import Videos from "./Videos.vue";
 
             .friends {
                 display: flex;
-                justify-content: center;
+                justify-content: space-between;
+                align-items: center;
                 width: 100%;
                 gap: 24px;
-                padding-left: 53px;
 
                 @media (max-width: $default-breakpoint) {
                     flex-direction: column;
@@ -225,10 +230,20 @@ import Videos from "./Videos.vue";
                 }
 
                 .friends-image {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 250px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                }
+
+                .friends-image {
                     img {
-                        width: 100%;
+                        width: auto;
                         height: auto;
-                        max-width: 144px;
+                        object-fit: contain;
                     }
                 }
 
@@ -237,7 +252,7 @@ import Videos from "./Videos.vue";
                     flex-direction: column;
                     flex: 1;
                     gap: 8px;
-                    margin-top: 5px;
+                    max-width: 70%;
 
                     @media (max-width: $default-breakpoint) {
                         text-align: center;
@@ -265,81 +280,19 @@ import Videos from "./Videos.vue";
                         font-size: $font-size-medium;
                         font-style: normal;
                         font-weight: 300;
-                        line-height: 30px; /* 136.364% */
+                        line-height: 30px;
+                        /* 136.364% */
                         letter-spacing: 1.76px;
+                        text-transform: uppercase;
                     }
+
                     .friends-description {
                         width: 100%;
                     }
+
                     .friends-text-link {
                         margin-top: 7px;
-                        @media (max-width: $default-breakpoint) {
-                            margin-top: 0px;
-                        }
-                    }
-                }
-            }
 
-            .mothers {
-                display: flex;
-                justify-content: center;
-                gap: 24px;
-                width: 100%;
-
-                @media (max-width: $default-breakpoint) {
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                .mothers-image {
-                    img {
-                        width: 100%;
-                        height: auto;
-                        max-width: 174px;
-                    }
-                }
-
-                .mothers-text {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-                    flex: 1;
-
-                    @media (max-width: $default-breakpoint) {
-                        text-align: center;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        gap: 15px;
-                    }
-
-                    p {
-                        margin: 0;
-                        font-size: $font-size-small;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: 22px;
-                        letter-spacing: 0.32px;
-                    }
-
-                    h4 {
-                        margin: 0;
-                        font-weight: 300;
-                        font-size: $font-size-medium;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: 30px; /* 136.364% */
-                        letter-spacing: 1.76px;
-                    }
-                    .mothers-description {
-                        width: 100%;
-
-                        @media (max-width: $default-breakpoint) {
-                            width: 100%;
-                        }
-                    }
-                    .mothers-text-link {
-                        margin-top: 7px;
                         @media (max-width: $default-breakpoint) {
                             margin-top: 0px;
                         }

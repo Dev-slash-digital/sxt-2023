@@ -3,15 +3,13 @@
         <div class="brand-message-container">
             <p v-if="props.brandSlug !== 'sxt'">
                 EL
-                <span style="font-weight: 400; text-transform: uppercase"
-                    >ÁRBOL DE NAVIDAD SOLIDARIO DE {{ brandName }}</span
-                >, <span style="font-style: italic">estará</span> EXPUESTO
+                <span style="font-weight: 400; text-transform: uppercase">ÁRBOL DE NAVIDAD SOLIDARIO DE {{ brandName
+                    }}</span>, <span style="font-style: italic">estará</span> EXPUESTO
                 <span>{{ postalAddress }}</span>
                 <span style="font-style: italic"> del</span>
                 <span style="font-weight: 400">
                     19 <span style="font-style: italic">al</span> 25 DE
-                    NOVIEMBRE</span
-                >
+                    NOVIEMBRE</span>
             </p>
             <div class="registration-process">
                 <p class="registration-process-text">

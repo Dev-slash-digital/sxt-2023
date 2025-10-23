@@ -1,7 +1,7 @@
 <template>
     <img
         class="carrousel-header--tree"
-        src="~/assets/img/generic/small-tree.png"
+        src="~/assets/img/generic/small-tree.svg"
         width="60"
         height="60"
     />

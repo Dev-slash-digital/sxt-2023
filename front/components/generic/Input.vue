@@ -1,13 +1,9 @@
 <template>
     <div class="input-container">
         <p v-if="props.error" class="input-error">{{ props.error }}</p>
-        <input
-            :value="modelValue"
-            :placeholder="props.placeholder"
-            @input="$emit('update:modelValue', $event.target.value)"
-            class="input"
-            :class="props.error ? 'has-error' : ''"
-        />
+        <input :value="modelValue" :placeholder="props.placeholder"
+            @input="$emit('update:modelValue', $event.target.value)" class="input"
+            :class="props.error ? 'has-error' : ''" />
     </div>
 </template>
 
@@ -41,7 +37,8 @@ defineEmits(["update:modelValue"]);
         font-size: $font-size-small-mobile;
         font-style: italic;
         font-weight: 300;
-        line-height: 22px; /* 137.5% */
+        line-height: 22px;
+        /* 137.5% */
         letter-spacing: 0.32px;
         margin: 0;
     }
@@ -51,7 +48,8 @@ defineEmits(["update:modelValue"]);
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
-        line-height: 22px; /* 137.5% */
+        line-height: 22px;
+        /* 137.5% */
         letter-spacing: 0.32px;
         width: 100%;
         border: 0;
@@ -63,6 +61,7 @@ defineEmits(["update:modelValue"]);
         &:focus {
             border-bottom-color: $secondary;
         }
+
         &:focus-visible {
             outline: -webkit-focus-ring-color auto 0;
         }
@@ -75,12 +74,15 @@ defineEmits(["update:modelValue"]);
         &::-webkit-input-placeholder {
             color: $text-color-primary;
         }
+
         &::-moz-placeholder {
             color: $text-color-primary;
         }
+
         &::-ms-placeholder {
             color: $text-color-primary;
         }
+
         &::placeholder {
             color: $text-color-primary;
         }

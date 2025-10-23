@@ -1,11 +1,8 @@
 <template>
     <div class="landing-registration-map">
         <div class="landing-welcome">
-            <BrandRegistrationMessage
-                :brand-slug="props.brandSlug"
-                :brand-name="props.brandName"
-                :postal-address="props.postalAddress"
-            ></BrandRegistrationMessage>
+            <BrandRegistrationMessage :brand-slug="props.brandSlug" :brand-name="props.brandName"
+                :postal-address="props.postalAddress"></BrandRegistrationMessage>
             <div class="map-container">
                 <img class="map-trees" src="~/assets/img/maps/trees.svg" />
             </div>
@@ -42,10 +39,8 @@ const props = defineProps({
     align-items: center;
     width: 100%;
     background: rgb(232, 100, 100);
-    background: linear-gradient(
-        rgba(232, 100, 100, 1) 3%,
-        rgba(159, 8, 29, 1) 100%
-    );
+    background: linear-gradient(rgba(232, 100, 100, 1) 3%,
+            rgba(159, 8, 29, 1) 100%);
     padding-bottom: 30px;
 
     @media (max-width: $default-breakpoint) {

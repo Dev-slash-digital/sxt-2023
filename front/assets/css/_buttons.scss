@@ -7,6 +7,7 @@ a.btn {
     transition: 0.3s all;
     padding-right: 0;
     padding-left: 0;
+
     &:not(:disabled):not(.disabled) {
         cursor: pointer;
     }
@@ -21,6 +22,7 @@ a.btn {
         border: none;
         font-style: italic;
         letter-spacing: 0.1em;
+
         .arrow {
             transition: 0.3s fill;
         }
@@ -118,22 +120,28 @@ input[type="text"] {
     &:focus {
         border-bottom-color: $secondary;
     }
+
     &:focus-visible {
         outline: -webkit-focus-ring-color auto 0;
     }
+
     &.has-error {
         border-bottom-color: #de2006;
     }
 }
+
 input[type="email"]::-webkit-input-placeholder {
     color: $text-color-primary;
 }
+
 input[type="email"]::-moz-placeholder {
     color: $text-color-primary;
 }
+
 input[type="email"]::-ms-placeholder {
     color: $text-color-primary;
 }
+
 input[type="email"]::placeholder {
     color: $text-color-primary;
 }
@@ -143,7 +151,7 @@ input[type="email"]::placeholder {
     text-align: left;
     padding: 4px 0;
 
-    > div:first-of-type {
+    >div:first-of-type {
         margin-right: 8px;
         margin-top: 4px;
     }

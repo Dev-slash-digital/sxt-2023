@@ -5,7 +5,7 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     let isAuth = false;
     try {
         const headers = useRequestHeaders(['cookie'])
-        const res = await API.get(`${config.public.baseURL}/back/api/user/me/`, { headers: headers});
+        const res = await API.get(`${config.public.baseURL}/back/api/user/me/`, { headers: headers });
         isAuth = res.data.is_authenticated;
     } catch (error) {
         return navigateTo("/");

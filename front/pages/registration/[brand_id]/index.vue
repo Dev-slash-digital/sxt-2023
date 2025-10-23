@@ -1,16 +1,8 @@
 <template>
-    <StickyHeader
-        v-if="!state.isLoading"
-        class="register-header"
-        :with-registration-button="true"
-        ref="header"
-    />
+    <StickyHeader v-if="!state.isLoading" class="register-header" :with-registration-button="true" ref="header" />
     <div v-if="!state.isLoading" class="landing-container-2">
-        <RegistrationTreeStreetMap
-            :brand-logo="state.brandLogo"
-            :brand-id="state.brandId"
-            :brand-slug="state.brand.slug"
-        />
+        <RegistrationTreeStreetMap :brand-logo="state.brandLogo" :brand-id="state.brandId"
+            :brand-slug="state.brand.slug" />
         <ContestInformation />
         <Donations />
         <SmallTree></SmallTree>
@@ -19,10 +11,7 @@
     <div v-if="state.isLoading" class="loader-container">
         <div class="loading-dual-ring"></div>
     </div>
-    <RegistrationFooter
-        v-if="!state.isLoading"
-        class="sxt-container-registration--footer"
-    />
+    <RegistrationFooter v-if="!state.isLoading" class="sxt-container-registration--footer" />
 </template>
 
 <script setup>
@@ -98,6 +87,7 @@ onBeforeMount(async () => {
 .register-header {
     width: 100%;
 }
+
 .landing-container-2 {
     display: flex;
     flex-direction: column;
@@ -117,6 +107,7 @@ onBeforeMount(async () => {
     align-items: center;
     min-height: 100vh;
     justify-content: center;
+
     .loading-dual-ring::after {
         border: 6px solid $primary;
         border-color: $primary transparent $primary transparent;

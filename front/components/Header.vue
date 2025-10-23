@@ -1,47 +1,22 @@
 <template>
     <div class="above-the-fold">
-        <img
-            class="logo"
-            src="~/assets/img/logo-above-the-fold.svg"
-            width="192"
-            height="180"
-            alt="Solidarity Xmas Tree"
-        />
+        <img class="logo" src="~/assets/img/logo-above-the-fold.svg" width="192" height="180"
+            alt="Solidarity Xmas Tree" />
         <div class="line"></div>
         <div class="scroll" @click="scrollToMain">SCROLL</div>
     </div>
 
-    <div
-        ref="header"
-        class="header-container"
-        :class="state.sticky && 'sticky'"
-    >
+    <div ref="header" class="header-container" :class="state.sticky && 'sticky'">
         <div class="navbar">
-            <img
-                @click="scrollToStart"
-                class="header-img"
-                width="80"
-                height="80"
-                src="~/assets/img/logo-header.svg"
-            />
+            <img @click="scrollToStart" class="header-img" width="80" height="80" src="~/assets/img/logo-header.svg" />
 
-            <div
-                class="header-links"
-                :class="state.showMobileMenu ? 'open-menu' : 'closed-menu'"
-            >
+            <div class="header-links" :class="state.showMobileMenu ? 'open-menu' : 'closed-menu'">
                 <a @click="scrollIntoElement('weare', 50)">¿QUIÉNES SOMOS?</a>
-                <a @click="scrollIntoElement('foundations', 100)"
-                    >FUNDACIONES BENEFICIARIAS</a
-                >
+                <a @click="scrollIntoElement('foundations', 100)">FUNDACIONES BENEFICIARIAS</a>
                 <a @click="scrollIntoElement('partners', 100)">PARTNERS</a>
             </div>
-            <img
-                @click="showMobileMenu"
-                src="~/assets/img/hamburger-menu.svg"
-                width="32"
-                height="16"
-                class="hamburger-menu"
-            />
+            <img @click="showMobileMenu" src="~/assets/img/hamburger-menu.svg" width="32" height="16"
+                class="hamburger-menu" />
         </div>
     </div>
 </template>
@@ -106,8 +81,8 @@ if (process.client) {
 
                 const condition =
                     rectlogoPlaceholedEl.top +
-                        rectlogoPlaceholedEl.height / 2 -
-                        (rectLogoEl.top + rectLogoEl.height / 2) >
+                    rectlogoPlaceholedEl.height / 2 -
+                    (rectLogoEl.top + rectLogoEl.height / 2) >
                     threshold;
 
                 logoEl.style.top = y * 0.8 + "px";
@@ -202,6 +177,7 @@ onBeforeUnmount(() => {
 
 <style lang="scss">
 @import "assets/css/variables";
+
 .above-the-fold {
     position: relative;
     background-color: $primary;
@@ -216,6 +192,7 @@ onBeforeUnmount(() => {
         width: 192px;
         position: relative;
         z-index: 3;
+
         @media (max-width: $mobile-width) {
             padding-bottom: 200px;
         }
@@ -229,6 +206,7 @@ onBeforeUnmount(() => {
         left: calc(50% - 1px);
         background-color: $above-the-fold-color;
         animation: scroll-line 1.5s infinite;
+
         @media (max-width: $mobile-width) {
             margin-bottom: 60px;
         }
@@ -258,7 +236,7 @@ onBeforeUnmount(() => {
     -webkit-backface-visibility: hidden;
 }
 
-.sticky + .sxt-container--main {
+.sticky+.sxt-container--main {
     padding-top: 100px;
 }
 
@@ -329,10 +307,12 @@ onBeforeUnmount(() => {
         padding: 30px 0px;
         gap: 10px;
     }
+
     .open-menu {
         opacity: 1;
         visibility: visible;
     }
+
     .closed-menu {
         opacity: 0;
         visibility: hidden;

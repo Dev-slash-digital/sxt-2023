@@ -1,54 +1,34 @@
 <template>
     <div class="landing-contest">
         <div class="landing-contest-logo">
-            <img
-                alt="Solidarity Xmas Tree"
-                class="landing-contest-logo-img"
-                src="~/assets/img/generic/contest-logo.svg"
-                width="47"
-                height="72"
-            />
+            <img alt="Solidarity Xmas Tree" class="landing-contest-logo-img" src="~/assets/img/generic/contest-logo.svg"
+                width="47" height="72" />
         </div>
         <div class="landing-contest-process">
-            <p
-                v-if="!props.raffleWinner && props.visitsCount < 7"
-                class="landing-contest-process-text"
-            >
+            <p v-if="!props.raffleWinner && props.visitsCount < 7" class="landing-contest-process-text">
                 HAGA LA RUTA
                 <span style="font-style: italic">y entre en el</span> SORTEO
                 <span style="font-style: italic">de una</span> EXPERIENCIA DE
                 LUJO ÚNICA
-                <span style="font-style: italic"
-                    >en <br />
-                    el</span
-                >
+                <span style="font-style: italic">en <br />
+                    el</span>
                 PALACIO ARRILUCE HOTEL
                 <span style="font-style: italic">en</span> GETXO
             </p>
-            <p
-                v-if="props.raffleWinner && props.visitsCount === 7"
-                class="landing-contest-process-text-scan"
-            >
+            <p v-if="props.raffleWinner && props.visitsCount === 7" class="landing-contest-process-text-scan">
                 HA ENTRADO
                 <span style="font-style: italic">en el</span> SORTEO
-                <span style="font-style: italic"
-                    >de <br />
-                    una</span
-                >
+                <span style="font-style: italic">de <br />
+                    una</span>
                 EXPERIENCIA DE LUJO ÚNICA <br />
                 <span style="font-style: italic">en el </span>PALACIO ARRILUCE
                 HOTEL <span style="font-style: italic"> en </span> GETXO
             </p>
-            <p
-                v-if="props.raffleWinner && props.visitsCount > 7"
-                class="landing-contest-process-text-scan"
-            >
+            <p v-if="props.raffleWinner && props.visitsCount > 7" class="landing-contest-process-text-scan">
                 USTED YA PARTICIPA
                 <span style="font-style: italic">en el</span> SORTEO
-                <span style="font-style: italic"
-                    >de <br />
-                    una</span
-                >
+                <span style="font-style: italic">de <br />
+                    una</span>
                 EXPERIENCIA DE LUJO ÚNICA <br />
                 <span style="font-style: italic">en el </span>PALACIO ARRILUCE
                 HOTEL <span style="font-style: italic"> en </span> GETXO
@@ -66,27 +46,16 @@
             <p class="landing-contest-validation-text">
                 Con la validación de
                 <span style="font-weight: 500">7 árboles</span> participará en
-                <span style="font-weight: 500"
-                    >el exclusivo sorteo de UNA EXPERIENCIA DE LUJO EN EL
-                    PALACIO ARRILUCE HOTEL EN GETXO</span
-                >
+                <span style="font-weight: 500">el exclusivo sorteo de UNA EXPERIENCIA DE LUJO EN EL
+                    PALACIO ARRILUCE HOTEL EN GETXO</span>
             </p>
         </div>
-        <div
-            v-if="props.qrPages && props.raffleWinner && props.visitsCount < 15"
-            class="landing-contest-validation"
-        >
-            <p
-                v-if="props.visitsCount === 7"
-                class="landing-contest-validation-text-scan"
-            >
+        <div v-if="props.qrPages && props.raffleWinner && props.visitsCount < 15" class="landing-contest-validation">
+            <p v-if="props.visitsCount === 7" class="landing-contest-validation-text-scan">
                 ¡LE HEMOS ENVIADO UN EMAIL CON LA CONFIRMACIÓN DE SU
                 PARTICIPACIÓN EN EL SORTEO!
             </p>
-            <p
-                v-if="props.visitsCount > 7"
-                class="landing-contest-validation-text-scan"
-            >
+            <p v-if="props.visitsCount > 7" class="landing-contest-validation-text-scan">
                 RECUERDE QUE LE HEMOS ENVIADO UN EMAIL CON LA CONFIRMACIÓN DE SU
                 PARTICIPACIÓN EN EL SORTEO
             </p>
@@ -94,12 +63,10 @@
         <div class="landing-contest-grant">
             <div class="landing-contest-grant-img"></div>
             <div class="landing-contest-grant-detail">
-                <div
-                    :class="{
-                        'landing-contest-grant-info': true,
-                        open: state.showAdditionalInformation,
-                    }"
-                >
+                <div :class="{
+                    'landing-contest-grant-info': true,
+                    open: state.showAdditionalInformation,
+                }">
                     <p class="landing-contest-grant-info-text">
                         Disfrute del lujo sereno a orillas del mar Cantábrico.
                         Una estancia de tres noches en la suite Arriluce del
@@ -160,30 +127,18 @@
                         <p>
                             Palacio Arriluce Hotel es miembro de The Leading
                             Hotels of the World <br />
-                            <a
-                                class="palace-link"
-                                href="https://www.palacioarrilucehotel.com/es/"
-                                target="_blank"
-                                >www.palacioarrilucehotel.com/es/</a
-                            >
+                            <a class="palace-link" href="https://www.palacioarrilucehotel.com/es/"
+                                target="_blank">www.palacioarrilucehotel.com/es/</a>
                         </p>
                         <div class="follow-logo">
-                            <a
-                                class="follow-link"
-                                href="https://www.instagram.com/solidarityxmastree/"
-                                target="_blank"
-                                ><Instagram></Instagram
-                            ></a>
+                            <a class="follow-link" href="https://www.instagram.com/solidarityxmastree/" target="_blank">
+                                <Instagram></Instagram>
+                            </a>
                         </div>
                     </div>
-                    <Button @handle-click="handleShowAdditionalInformation"
-                        >Más información</Button
-                    >
-                    <a
-                        class="landing-contest-grant-info-terms-link"
-                        href="/conditions/"
-                        >Términos y condiciones del sorteo</a
-                    >
+                    <Button @handle-click="handleShowAdditionalInformation">Más información</Button>
+                    <a class="landing-contest-grant-info-terms-link" href="/conditions/">Términos y condiciones del
+                        sorteo</a>
                 </div>
             </div>
         </div>
@@ -242,15 +197,18 @@ const handleShowAdditionalInformation = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .landing-contest-logo-img {
             width: 47px;
             height: auto;
         }
     }
+
     .landing-contest-process {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .landing-contest-process-text {
             max-width: 870px;
             text-align: center;
@@ -277,10 +235,12 @@ const handleShowAdditionalInformation = () => {
             padding: 0;
         }
     }
+
     .landing-contest-qr {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .landing-contest-qr-text {
             text-align: center;
             font-style: normal;
@@ -300,10 +260,12 @@ const handleShowAdditionalInformation = () => {
             }
         }
     }
+
     .landing-contest-validation {
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .landing-contest-validation-text {
             max-width: 887px;
             text-align: center;
@@ -343,6 +305,7 @@ const handleShowAdditionalInformation = () => {
             }
         }
     }
+
     .landing-contest-grant {
         display: flex;
         flex-direction: column;
@@ -361,8 +324,7 @@ const handleShowAdditionalInformation = () => {
             display: flex;
             width: 888px;
             height: 525px;
-            background: url("~/assets/img/registration/contest-grant.png")
-                lightgray 50% / cover no-repeat;
+            background: url("~/assets/img/registration/contest-grant.png") lightgray 50% / cover no-repeat;
 
             @media (max-width: $default-breakpoint) {
                 width: 325px;

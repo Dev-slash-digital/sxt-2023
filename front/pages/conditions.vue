@@ -1,11 +1,7 @@
 <template>
     <div class="conditions-header">
         <NuxtLink to="/">
-            <img
-                width="72"
-                height="87.4"
-                src="~/assets/img/logo-conditions.svg"
-            />
+            <img width="72" height="87.4" src="~/assets/img/logo-conditions.svg" />
         </NuxtLink>
     </div>
     <div class="conditions-text">
@@ -111,12 +107,14 @@ useHead({
     margin-left: 61px;
     margin-right: 61px;
     max-width: $max-width-lg;
+
     p {
         color: #000;
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
-        line-height: 16px; /* 160% */
+        line-height: 16px;
+        /* 160% */
         letter-spacing: 0.25px;
     }
 }
@@ -127,7 +125,8 @@ ul {
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
-        line-height: 16px; /* 160% */
+        line-height: 16px;
+        /* 160% */
         letter-spacing: 0.25px;
     }
 }

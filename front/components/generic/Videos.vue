@@ -1,29 +1,19 @@
 <template>
     <div class="videos-container">
         <div class="main-video">
-            <iframe
-                :src="state.videoSource"
-                title="YouTube video player"
-                frameborder="0"
+            <iframe :src="state.videoSource" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-            ></iframe>
+                allowfullscreen></iframe>
         </div>
         <div class="videos">
             <div class="friends">
-                <img
-                    @click="changeVideoSource(0)"
-                    :class="state.index === 0 ? 'active' : ''"
-                    src="~/assets/img/videos/Friends.png"
-                />
+                <img @click="changeVideoSource(0)" :class="state.index === 0 ? 'active' : ''"
+                    src="~/assets/img/videos/Friends.png" />
                 <p>GRANDES AMIGOS</p>
             </div>
             <div class="mothers">
-                <img
-                    @click="changeVideoSource(1)"
-                    :class="state.index === 1 ? 'active' : ''"
-                    src="~/assets/img/videos/Mothers.png"
-                />
+                <img @click="changeVideoSource(1)" :class="state.index === 1 ? 'active' : ''"
+                    src="~/assets/img/videos/Mothers.png" />
                 <p>MAMÁS EN ACCIÓN</p>
             </div>
         </div>
@@ -72,6 +62,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @import "assets/css/variables";
+
 .videos-container {
     display: flex;
     flex-direction: column;
@@ -84,6 +75,7 @@ onMounted(() => {
 
     .main-video {
         width: 100%;
+
         iframe {
             aspect-ratio: 16 / 9;
             width: 100%;

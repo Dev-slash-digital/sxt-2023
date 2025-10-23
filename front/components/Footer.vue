@@ -2,54 +2,33 @@
     <div id="partners" class="footer-container">
         <div class="footer-partners">
             <p class="text-uppercase">Nuestros partners</p>
-            <img src="/img/partners/Abanca.svg" width="186" height="67" />
+            <img src="/img/partners/Abanca.svg" width="186" height="67" style="display:none;"/>
             <div class="footer-carousel">
-                <CustomCarousel
-                    :light-buttons="true"
-                    :pictures="partnersPictures"
-                ></CustomCarousel>
+                <CustomCarousel :light-buttons="true" :pictures="partnersPictures"></CustomCarousel>
             </div>
         </div>
         <div class="footer-info">
-            <img
-                class="footer-tree"
-                src="~/assets/img/footer/tree.png"
-                width="92"
-                height="92"
-            />
+            <img class="footer-tree" src="~/assets/img/footer/tree.png" width="92" height="92" />
             <div class="footer-follow">
                 <div class="follow-text">
                     <p class="footer-follow-text">¡SÍGANOS EN INSTAGRAM!</p>
-                    <a
-                        href="https://www.instagram.com/solidarityxmastree/"
-                        target="_blank"
-                        ><Instagram></Instagram
-                    ></a>
+                    <a href="https://www.instagram.com/solidarityxmastree/" target="_blank">
+                        <Instagram></Instagram>
+                    </a>
                 </div>
                 <hr class="footer-line" />
                 <p class="info-together">info@togetherplus.es</p>
             </div>
             <div class="footer-rights">
-                <span
-                    ><span style="font-weight: 500; font-size: 14px"
-                        >SOLIDARITY XMAX TREE</span
-                    >
+                <span><span style="font-weight: 500; font-size: 14px">SOLIDARITY XMAX TREE</span>
                     is a registered idea and brand owned by TogetherPlus, S.L
-                    All rights Reserved</span
-                >
+                    All rights Reserved</span>
                 <div class="footer-rights--partner">
-                    <span
-                        >Partner tecnológico:
+                    <span>Partner tecnológico:
                         <a href="https://www.with-madrid.com" target="_blank">
                             www.with-madrid.com
-                        </a></span
-                    >
-                    <img
-                        class="partner-with"
-                        src="~/assets/img/footer/with.svg"
-                        width="36"
-                        height="14"
-                    />
+                        </a></span>
+                    <img class="partner-with" src="~/assets/img/footer/with.svg" width="36" height="14" />
                 </div>
             </div>
         </div>
@@ -61,21 +40,16 @@ import CustomCarousel from "./CustomCarousel.vue";
 import Instagram from "./svg/Instagram.vue";
 
 const partnersPictures = [
-    ["/img/partners/Christies.svg", ""],
+    ["/img/partners/Abanca.svg", ""],
     ["/img/partners/BMW.svg", ""],
     ["/img/partners/Naturgy.svg", ""],
     ["/img/partners/Galeriascanalejas.svg", ""],
-    ["/img/partners/The objective.svg", ""],
-    ["/img/partners/LG.svg", ""],
     ["/img/partners/Loropiana.svg", ""],
-    ["/img/partners/Chandon.svg", ""],
 ];
 
 const randomPartnersPictures = [
-    ["/img/partners/Mahou-Solan.svg", ""],
-    ["/img/partners/Marques-Cuervo.svg", ""],
-    ["/img/partners/Balbisiana-Cahmere.svg", ""],
     ["/img/partners/Nuevo.svg", ""],
+    ["/img/partners/BANG-OLUFSEN.svg", ""],
 ];
 
 shuffle(randomPartnersPictures);
@@ -118,19 +92,21 @@ function shuffle(array) {
         align-items: center;
         width: 100%;
         gap: 20px;
-        color: $text-color-secondary;
+        color: $font-four;
         max-width: $max-width-lg;
 
         p {
             font-size: $font-size-medium;
             font-style: normal;
             font-weight: 300;
-            line-height: 30px; /* 136.364% */
+            line-height: 30px;
+            /* 136.364% */
             letter-spacing: 1.76px;
 
             @media (max-width: $default-breakpoint) {
                 font-size: $font-size-medium;
-                line-height: 24px; /* 133.333% */
+                line-height: 24px;
+                /* 133.333% */
                 letter-spacing: 1.44px;
             }
         }
@@ -140,6 +116,7 @@ function shuffle(array) {
             height: auto;
             max-width: 186px;
         }
+
         .footer-carousel {
             width: 80%;
             padding-top: 1em;
@@ -147,6 +124,7 @@ function shuffle(array) {
             gap: 1em;
         }
     }
+
     .footer-info {
         background-color: $primary;
         display: flex;
@@ -165,6 +143,7 @@ function shuffle(array) {
 
             padding: 48px 0px;
         }
+
         .footer-follow {
             display: flex;
             padding: 24px 115px;
@@ -183,17 +162,20 @@ function shuffle(array) {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+
                 .footer-follow-text {
                     width: 100%;
                     font-weight: 300;
                     font-style: normal;
                     font-size: $font-size-medium;
-                    line-height: 30px; /* 136.364% */
+                    line-height: 30px;
+                    /* 136.364% */
                     letter-spacing: 1.76px;
 
                     @media (max-width: $default-breakpoint) {
                         font-size: $font-size-medium-mobile;
-                        line-height: 24px; /* 133.333% */
+                        line-height: 24px;
+                        /* 133.333% */
                         letter-spacing: 1.44px;
                     }
                 }
@@ -209,13 +191,16 @@ function shuffle(array) {
         .footer-line {
             width: 100%;
         }
+
         .info-together {
             font-style: italic;
             font-size: 16px;
             font-weight: 300;
-            line-height: 22px; /* 137.5% */
+            line-height: 22px;
+            /* 137.5% */
             letter-spacing: 0.32px;
         }
+
         .footer-rights {
             width: 100%;
             display: flex;

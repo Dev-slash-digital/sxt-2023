@@ -10,47 +10,29 @@
             <form class="form">
                 <div class="landing-container--form--elements">
                     <div class="landing-container--form--input">
-                        <div
-                            v-if="errors.email"
-                            class="landing-container--form--error"
-                        >
+                        <div v-if="errors.email" class="landing-container--form--error">
                             <p>{{ errors.email }}</p>
                         </div>
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Direción de email"
-                            name="email"
-                            v-model="formData.email"
-                        />
+                        <input type="email" id="email" placeholder="Direción de email" name="email"
+                            v-model="formData.email" />
                     </div>
                     <div class="landing-container--form--checkbox">
-                        <div
-                            v-if="errors.checked"
-                            class="landing-container--form--error"
-                        >
+                        <div v-if="errors.checked" class="landing-container--form--error">
                             <p>{{ errors.checked }}</p>
                         </div>
                         <div class="landing-container--form--checkbox-items">
-                            <input
-                                type="checkbox"
-                                id="checkbox"
-                                v-model="formData.checked"
-                                name="checkbox"
-                            />
+                            <input type="checkbox" id="checkbox" v-model="formData.checked" name="checkbox" />
                             <label for="checkbox">
                                 He leído y acepto los
-                                <a href="/conditions/">términos y condiciones</a
-                                >. Sus datos personales no serán utilizados para
+                                <a href="/conditions/">términos y condiciones</a>. Sus datos personales no serán
+                                utilizados para
                                 uso comercial.
                             </label>
                         </div>
                     </div>
                 </div>
                 <div class="landing-container--form--submit">
-                    <Button v-if="!state.sendingInfo" @handle-click="submitForm"
-                        >Registrar</Button
-                    >
+                    <Button v-if="!state.sendingInfo" @handle-click="submitForm">Registrar</Button>
                     <div v-else class="loader-container">
                         <div class="loading-dual-ring"></div>
                     </div>

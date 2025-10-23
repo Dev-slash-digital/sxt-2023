@@ -1,20 +1,10 @@
 <template>
-    <StickyHeader
-        v-if="!state.isLoading"
-        class="header-confirmation"
-        ref="header"
-    />
+    <StickyHeader v-if="!state.isLoading" class="header-confirmation" ref="header" />
     <div v-if="!state.isLoading" class="landing-container-confirmation">
-        <RegistrationMessage
-            :brand-logo="state.brandLogo"
-            :brand-id="state.brandId"
-            :registration-email="state.email"
-        ></RegistrationMessage>
-        <RegistrationTreeStreetMapConfirmation
-            :postal-address="state.brandPostalAddress"
-            :brand-name="state.brandName"
-            :brand-slug="state.brand.slug"
-        ></RegistrationTreeStreetMapConfirmation>
+        <RegistrationMessage :brand-logo="state.brandLogo" :brand-id="state.brandId" :registration-email="state.email">
+        </RegistrationMessage>
+        <RegistrationTreeStreetMapConfirmation :postal-address="state.brandPostalAddress" :brand-name="state.brandName"
+            :brand-slug="state.brand.slug"></RegistrationTreeStreetMapConfirmation>
         <ContestInformation />
         <Donations />
         <BrandCarousel />
@@ -103,6 +93,7 @@ onBeforeMount(async () => {
 .header-confirmation {
     width: 100%;
 }
+
 .landing-container-confirmation {
     display: flex;
     flex-direction: column;
@@ -115,16 +106,19 @@ onBeforeMount(async () => {
         gap: 80px;
     }
 }
+
 .loader-container {
     display: flex;
     align-items: center;
     min-height: 100vh;
     justify-content: center;
+
     .loading-dual-ring::after {
         border: 6px solid $primary;
         border-color: $primary transparent $primary transparent;
     }
 }
+
 .footer-confirmation {
     width: 100%;
 }

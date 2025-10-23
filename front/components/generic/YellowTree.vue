@@ -1,18 +1,14 @@
 <template>
     <div class="yellow-tree-container">
         <hr />
-        <img
-            class="yellow-tree"
-            src="~/assets/img/scan/red-tree.svg"
-            width="16"
-            height="18"
-        />
+        <img class="yellow-tree" src="~/assets/img/scan/red-tree.svg" width="16" height="18" />
         <hr />
     </div>
 </template>
 
 <style lang="scss" scoped>
 @import "assets/css/variables";
+
 .yellow-tree-container {
     display: flex;
     width: 100%;

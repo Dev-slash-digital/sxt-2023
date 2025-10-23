@@ -2,29 +2,21 @@
     <div class="landing-map">
         <div class="landing-welcome">
             <div class="registration-welcome">
-                <img
-                    :class="
-                        props.brandSlug !== 'sxt'
-                            ? 'registration-welcome-brand-logo'
-                            : 'registration-welcome-brand-logo-sxt'
-                    "
-                    :src="brandLogo"
-                />
+                <img :class="props.brandSlug !== 'sxt'
+                        ? 'registration-welcome-brand-logo'
+                        : 'registration-welcome-brand-logo-sxt'
+                    " :src="brandLogo" />
                 <p class="registration-welcome-text">
                     Le da la bienvenida a la ruta solidarity xmas tree
                 </p>
-                <RegistrationLink
-                    :href="`/registration/${brandId}/form/`"
-                    target="_parent"
-                    >Regístrese y acceda a la ruta</RegistrationLink
-                >
+                <RegistrationLink :href="`/registration/${brandId}/form/`" target="_parent">Regístrese y acceda a la
+                    ruta</RegistrationLink>
             </div>
             <div class="registration-advice">
                 <p class="registration-advice-text">
                     <span class="registrese">
                         REGÍSTRESE
-                        <span style="font-style: italic">para</span></span
-                    >
+                        <span style="font-style: italic">para</span></span>
                     DESCUBRIR
                     <span style="font-style: italic">en</span> EXCLUSIVA
                     <span style="font-style: italic">los</span> ÁRBOLES DE
@@ -34,8 +26,7 @@
                     <span style="font-style: italic">del</span>
                     <span style="font-weight: 400">
                         19 <span style="font-style: italic">AL</span> 25 DE
-                        NOVIEMBRE</span
-                    >
+                        NOVIEMBRE</span>
                 </p>
             </div>
             <div class="registration-process">
@@ -205,6 +196,7 @@ const props = defineProps({
             }
         }
     }
+
     .map-container {
         display: flex;
         flex-direction: column;
@@ -212,10 +204,8 @@ const props = defineProps({
         justify-content: center;
         width: 100%;
         background: rgb(232, 100, 100);
-        background: linear-gradient(
-            rgba(232, 100, 100, 1) 3%,
-            rgba(159, 8, 29, 1) 100%
-        );
+        background: linear-gradient(rgba(232, 100, 100, 1) 3%,
+                rgba(159, 8, 29, 1) 100%);
         padding: 109px 0 66px 0;
         gap: 100px;
 

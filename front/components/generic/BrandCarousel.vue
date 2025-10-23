@@ -1,7 +1,7 @@
 <template>
     <div class="brands-carousel-container">
         <p>
-            LAS GRANDES MARCAS QUE PARTICIPAN EN 2024 EN ESTA INICIATIVA
+            LAS GRANDES MARCAS QUE PARTICIPAN EN 2025 EN ESTA INICIATIVA
             SOLIDARIA ÚNICA SON
         </p>
         <div class="brands-carousel--carousel">
@@ -33,12 +33,14 @@ import CustomCarousel from "/components/CustomCarousel.vue";
 
 <style lang="scss" scoped>
 @import "assets/css/variables";
+
 .brands-carousel-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 72px;
+
     @media (max-width: $default-breakpoint) {
         gap: 48px;
     }
@@ -52,14 +54,16 @@ import CustomCarousel from "/components/CustomCarousel.vue";
         width: 59%;
         font-style: normal;
         font-weight: 300;
-        line-height: 30px; /* 136.364% */
+        line-height: 30px;
+        /* 136.364% */
         letter-spacing: 1.76px;
         margin: 0;
 
         @media (max-width: $default-breakpoint) {
             width: 100%;
             font-size: $font-size-medium-mobile;
-            line-height: 24px; /* 133.333% */
+            line-height: 24px;
+            /* 133.333% */
             letter-spacing: 1.44px;
             padding-left: 25px;
             padding-right: 25px;

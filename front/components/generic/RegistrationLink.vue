@@ -2,21 +2,17 @@
     <div class="link-container">
         <a :href="props.href" :target="props.target">
             <div class="link">
-                <p class="link-text"><slot></slot></p>
+                <p class="link-text">
+                    <slot></slot>
+                </p>
                 <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_695_7510)">
                         <path
-                            d="M9.72888 3.33337V3.5816L12.6694 7.1277H0V7.87238H12.6382L9.72888 11.4362V11.6667L15.0156 7.67735V7.305L9.72888 3.33337Z"
-                        />
+                            d="M9.72888 3.33337V3.5816L12.6694 7.1277H0V7.87238H12.6382L9.72888 11.4362V11.6667L15.0156 7.67735V7.305L9.72888 3.33337Z" />
                     </g>
                     <defs>
                         <clipPath id="clip0_695_7510">
-                            <rect
-                                width="15"
-                                height="8.33333"
-                                fill="white"
-                                transform="translate(0 3.33337)"
-                            />
+                            <rect width="15" height="8.33333" fill="white" transform="translate(0 3.33337)" />
                         </clipPath>
                     </defs>
                 </svg>
@@ -59,10 +55,9 @@ const props = defineProps({
             fill: $font-secondary;
         }
 
-        transition:
-            0.3s color,
-            0.3s fill,
-            0.3s border-color;
+        transition: 0.3s color,
+        0.3s fill,
+        0.3s border-color;
 
         .link {
             display: flex;

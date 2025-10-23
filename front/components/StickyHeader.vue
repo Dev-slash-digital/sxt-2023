@@ -1,46 +1,18 @@
 <template>
-    <div
-        ref="header"
-        class="sticky-header-container"
-        :class="state.sticky && 'sticky'"
-    >
+    <div ref="header" class="sticky-header-container" :class="state.sticky && 'sticky'">
         <div class="navbar">
-            <img
-                @click="goToHome"
-                class="header-img"
-                width="80"
-                height="80"
-                src="~/assets/img/logo-header.svg"
-            />
-            <RegistrationButton
-                v-if="withRegistrationButton"
-                @handle-click="gotToForm"
-                :invert-display-behavior="true"
-                >Regístrese</RegistrationButton
-            >
-            <div
-                class="header-links"
-                :class="state.showMobileMenu ? 'open-menu' : 'closed-menu'"
-            >
-                <a
-                    v-if="props.withFoundationsLink"
-                    @click="scrollIntoElement('foundations', 100)"
-                    >FUNDACIONES BENEFICIARIAS</a
-                >
+            <img @click="goToHome" class="header-img" width="80" height="80" src="~/assets/img/logo-header.svg" />
+            <RegistrationButton v-if="withRegistrationButton" @handle-click="gotToForm" :invert-display-behavior="true">
+                Regístrese</RegistrationButton>
+            <div class="header-links" :class="state.showMobileMenu ? 'open-menu' : 'closed-menu'">
+                <a v-if="props.withFoundationsLink" @click="scrollIntoElement('foundations', 100)">FUNDACIONES
+                    BENEFICIARIAS</a>
                 <a @click="scrollIntoElement('partners', 100)">PARTNERS</a>
-                <RegistrationButton
-                    v-if="withRegistrationButton"
-                    @handle-click="gotToForm"
-                    >Regístrese</RegistrationButton
-                >
+                <RegistrationButton v-if="withRegistrationButton" @handle-click="gotToForm">Regístrese
+                </RegistrationButton>
             </div>
-            <img
-                @click="showMobileMenu"
-                width="32"
-                height="16"
-                src="~/assets/img/hamburger-menu.svg"
-                class="hamburger-menu"
-            />
+            <img @click="showMobileMenu" width="32" height="16" src="~/assets/img/hamburger-menu.svg"
+                class="hamburger-menu" />
         </div>
     </div>
 </template>
@@ -133,15 +105,15 @@ function gotToForm() {
     -webkit-backface-visibility: hidden;
 }
 
-.sticky + .landing-container-2 {
+.sticky+.landing-container-2 {
     padding-top: 100px;
 }
 
-.sticky + .landing-container-confirmation {
+.sticky+.landing-container-confirmation {
     padding-top: 100px;
 }
 
-.sticky + .sxt-container-registration-form--main {
+.sticky+.sxt-container-registration-form--main {
     padding-top: 100px;
 }
 
@@ -206,10 +178,12 @@ function gotToForm() {
         padding: 30px 0px;
         gap: 10px;
     }
+
     .open-menu {
         opacity: 1;
         visibility: visible;
     }
+
     .closed-menu {
         opacity: 0;
         visibility: hidden;

@@ -6,31 +6,19 @@
             </p>
             <img src="/img/partners/Abanca.svg" width="186" height="67" />
             <div class="footer-carousel">
-                <CustomCarousel
-                    :light-buttons="true"
-                    :pictures="partnersPictures"
-                ></CustomCarousel>
+                <CustomCarousel :light-buttons="true" :pictures="partnersPictures"></CustomCarousel>
             </div>
         </div>
         <div class="footer-info">
             <div class="footer-info-tree">
                 <div class="footer-tree">
-                    <img
-                        class="footer-tree-img"
-                        src="~/assets/img/footer/tree.png"
-                        width="92"
-                        height="92"
-                    />
+                    <img class="footer-tree-img" src="~/assets/img/footer/tree.png" width="92" height="92" />
                 </div>
                 <div class="tree-info">
                     <p class="footer-tree-info">
                         SI QUIERE SABER MÁS SOBRE SOLIDARITY XMAS TREE ENTRE EN
                     </p>
-                    <a
-                        class="footer-tree-link"
-                        href="https://solidarityxmastree.com"
-                        >www.solidarityxmastree.com</a
-                    >
+                    <a class="footer-tree-link" href="https://solidarityxmastree.com">www.solidarityxmastree.com</a>
                 </div>
             </div>
             <div class="footer-follow-content">
@@ -40,40 +28,24 @@
                             <p class="footer-follow-text">
                                 ¡SÍGANOS EN INSTAGRAM!
                             </p>
-                            <a
-                                href="https://www.instagram.com/solidarityxmastree/"
-                                target="_blank"
-                                ><Instagram></Instagram
-                            ></a>
+                            <a href="https://www.instagram.com/solidarityxmastree/" target="_blank">
+                                <Instagram></Instagram>
+                            </a>
                         </div>
                         <hr class="footer-line" />
                         <p class="info-together">info@togetherplus.es</p>
                     </div>
                 </div>
                 <div class="footer-rights">
-                    <span
-                        ><span style="font-weight: 500; font-size: 14px"
-                            >SOLIDARITY XMAX TREE</span
-                        >
+                    <span><span style="font-weight: 500; font-size: 14px">SOLIDARITY XMAX TREE</span>
                         is a registered idea and brand owned by TogetherPlus,
-                        S.L All rights Reserved</span
-                    >
+                        S.L All rights Reserved</span>
                     <div class="footer-rights--partner">
-                        <span
-                            >Partner tecnológico:
-                            <a
-                                href="https://www.with-madrid.com"
-                                target="_blank"
-                            >
+                        <span>Partner tecnológico:
+                            <a href="https://www.with-madrid.com" target="_blank">
                                 www.with-madrid.com
-                            </a></span
-                        >
-                        <img
-                            class="partner-with"
-                            src="~/assets/img/footer/with.svg"
-                            width="36"
-                            height="14"
-                        />
+                            </a></span>
+                        <img class="partner-with" src="~/assets/img/footer/with.svg" width="36" height="14" />
                     </div>
                 </div>
             </div>
@@ -150,12 +122,14 @@ function shuffle(array) {
             font-size: $font-size-medium;
             font-style: normal;
             font-weight: 300;
-            line-height: 30px; /* 136.364% */
+            line-height: 30px;
+            /* 136.364% */
             letter-spacing: 1.76px;
 
             @media (max-width: $default-breakpoint) {
                 font-size: $font-size-medium;
-                line-height: 24px; /* 133.333% */
+                line-height: 24px;
+                /* 133.333% */
                 letter-spacing: 1.44px;
             }
         }
@@ -165,6 +139,7 @@ function shuffle(array) {
             height: auto;
             max-width: 186px;
         }
+
         .footer-carousel {
             width: 80%;
             padding-top: 1em;
@@ -172,6 +147,7 @@ function shuffle(array) {
             gap: 1em;
         }
     }
+
     .footer-info {
         background-color: $primary;
         display: flex;
@@ -206,32 +182,38 @@ function shuffle(array) {
                     padding: 0;
                 }
             }
+
             .tree-info {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
                 width: 100%;
+
                 .footer-tree-info {
                     width: 100%;
                     font-weight: 300;
                     font-style: normal;
                     font-size: $font-size-medium;
-                    line-height: 30px; /* 136.364% */
+                    line-height: 30px;
+                    /* 136.364% */
                     letter-spacing: 1.76px;
                     margin: 0;
 
                     @media (max-width: $default-breakpoint) {
                         font-size: $font-size-medium-mobile;
-                        line-height: 24px; /* 133.333% */
+                        line-height: 24px;
+                        /* 133.333% */
                         letter-spacing: 1.44px;
                     }
                 }
+
                 .footer-tree-link {
                     width: 100%;
                     font-weight: 300;
                     font-style: normal;
                     font-size: $font-size-medium;
-                    line-height: 30px; /* 136.364% */
+                    line-height: 30px;
+                    /* 136.364% */
                     letter-spacing: 1.76px;
                     text-transform: uppercase;
                     color: $font-secondary;
@@ -239,18 +221,21 @@ function shuffle(array) {
 
                     @media (max-width: $default-breakpoint) {
                         font-size: 19px;
-                        line-height: 30px; /* 133.333% */
+                        line-height: 30px;
+                        /* 133.333% */
                         letter-spacing: 1.52px;
                     }
                 }
             }
         }
+
         .footer-follow-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
+
             .footer-follow {
                 display: flex;
                 padding: 24px 115px;
@@ -283,7 +268,8 @@ function shuffle(array) {
                             font-weight: 300;
                             font-style: normal;
                             font-size: $font-size-medium;
-                            line-height: 30px; /* 136.364% */
+                            line-height: 30px;
+                            /* 136.364% */
                             letter-spacing: 1.76px;
                             text-transform: uppercase;
                             margin: 0;
@@ -309,6 +295,7 @@ function shuffle(array) {
                     }
                 }
             }
+
             .footer-rights {
                 width: 100%;
                 display: flex;
@@ -356,11 +343,13 @@ function shuffle(array) {
             width: 100%;
             margin: 0;
         }
+
         .info-together {
             font-style: italic;
             font-size: 16px;
             font-weight: 300;
-            line-height: 22px; /* 137.5% */
+            line-height: 22px;
+            /* 137.5% */
             letter-spacing: 0.32px;
             margin: 0;
         }

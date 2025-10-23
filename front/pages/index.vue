@@ -2,12 +2,7 @@
     <div class="landing-container">
         <div class="landing-intro">
             <div id="weare" style="opacity: 0">
-                <img
-                    class="logo-purple"
-                    width="106.6"
-                    height="100"
-                    src="~/assets/img/logo-purple.svg"
-                />
+                <img class="logo-purple" width="106.6" height="100" src="~/assets/img/logo-purple.svg" />
             </div>
             <p class="intro-text">
                 SOLIDARITY XMAS TREE
@@ -23,33 +18,18 @@
                     <SmallTree></SmallTree>
                     <p>DESCUBRA LOS ÁRBOLES DE EDICIONES ANTERIORES</p>
                 </div>
-                <LazyCarousel
-                    v-if="state.isMobile"
-                    :pictures="pictures"
-                    :trees-carousel="true"
-                ></LazyCarousel>
-                <CustomCarousel
-                    v-else
-                    :pictures="pictures"
-                    :trees-carousel="true"
-                >
+                <LazyCarousel v-if="state.isMobile" :pictures="pictures" :trees-carousel="true"></LazyCarousel>
+                <CustomCarousel v-else :pictures="pictures" :trees-carousel="true">
                 </CustomCarousel>
             </div>
         </div>
         <div class="landing-map">
             <div class="info-container">
-                <img
-                    class="info-logo"
-                    width="123.61"
-                    height="150"
-                    src="~/assets/img/logo-red-home.svg"
-                />
+                <img class="info-logo" width="140" height="180" src="~/assets/img/logo-red-home.svg" />
                 <p class="info-text">
                     DEL
-                    <span style="font-weight: 400"
-                        >19 <span style="font-style: italic">al</span> 25 DE
-                        NOVIEMBRE,</span
-                    >
+                    <span style="font-weight: 400">18 <span style="font-style: italic">al</span> 24 DE
+                        NOVIEMBRE,</span>
                     <span style="font-style: italic"> los </span>ÁRBOLES DE
                     NAVIDAD SE EXPONEN
                     <span style="font-style: italic">en las</span> BOUTIQUES DE
@@ -57,7 +37,7 @@
                     MARCAS PARTICIPANTES FORMANDO LA RUTA SOLIDARITY XMAS TREE
                 </p>
             </div>
-            <div class="map-container">
+            <div class="map-container" style="display:none;">
                 <img class="map-trees" src="~/assets/img/maps/trees.svg" />
             </div>
         </div>
@@ -88,44 +68,20 @@ const state = reactive({
 });
 
 const pictures = [
-    ["/img/trees/26.webp", "Giorgio Armani, Solidarity Xmas Tree 2023"],
-    ["/img/trees/19.webp", "Prada, Solidarity Xmas Tree 2021"],
-    ["/img/trees/12.webp", "IWC, Solidarity Xmas Tree 2021"],
-    ["/img/trees/33.webp", "Nuba, Solidarity Xmas Tree 2023"],
-    ["/img/trees/28.webp", "IWC, Solidarity Xmas Tree 2023"],
-    ["/img/trees/27.webp", "Hermes, Solidarity Xmas Tree 2023"],
-    ["/img/trees/35.webp", "Stefano Ricci, Solidarity Xmas Tree 2023"],
-    ["/img/trees/11.webp", "Brunello Cucinelli, Solidarity Xmas Tree 2019"],
-    ["/img/trees/15.webp", "Chanel, Solidarity Xmas Tree 2021"],
-    ["/img/trees/17.webp", "Stella Mccartney, Solidarity Xmas Tree 2022"],
-    ["/img/trees/23.webp", "Cartier, Solidarity Xmas Tree 2023"],
-    ["/img/trees/25.webp", "Chopard, Solidarity Xmas Tree 2023"],
-    ["/img/trees/2.webp", "Etro, Solidarity Xmas Tree 2017"],
-    ["/img/trees/9.webp", "Chopard, Solidarity Xmas Tree 2021"],
-    ["/img/trees/32.webp", "Ze Garcia, Solidarity Xmas Tree 2023"],
-    ["/img/trees/6.webp", "Hermes, Solidarity Xmas Tree 2019"],
-    ["/img/trees/30.webp", "Loewe, Solidarity Xmas Tree 2023"],
-    ["/img/trees/3.webp", "Chopard, Solidarity Xmas Tree 2019"],
-    ["/img/trees/1.webp", "Cartier, Solidarity Xmas Tree 2022"],
-    ["/img/trees/29.webp", "Jaeger LeCoultre, Solidarity Xmas Tree 2023"],
-    ["/img/trees/31.webp", "Maison Valmont, Solidarity Xmas Tree 2023"],
-    ["/img/trees/21.webp", "Aquazzura, Solidarity Xmas Tree 2023"],
-    ["/img/trees/34.webp", "Omega, Solidarity Xmas Tree 2023"],
-    ["/img/trees/7.webp", "Chaumet, Solidarity Xmas Tree 2022"],
-    [
-        "/img/trees/22.webp",
-        "Árbol de las fundaciones, Solidarity Xmas Tree 2023",
-    ],
-    ["/img/trees/4.webp", "Bvlgari, Solidarity Xmas Tree 2022"],
-    ["/img/trees/18.webp", "Zimmermann, Solidarity Xmas Tree 2022"],
-    ["/img/trees/13.webp", "Hermes, Solidarity Xmas Tree 2022"],
-    ["/img/trees/8.webp", "Loewe, Solidarity Xmas Tree 2021"],
-    ["/img/trees/24.webp", "Chaumet, Solidarity Xmas Tree 2023"],
-    ["/img/trees/10.webp", "Loro Piana, Solidarity Xmas Tree 2020"],
-    ["/img/trees/20.webp", "Omega, Solidarity Xmas Tree 2022"],
-    ["/img/trees/14.webp", "La Perla, Solidarity Xmas Tree 2019"],
-    ["/img/trees/5.webp", "Christian Louboutin, Solidarity Xmas Tree 2018"],
-    ["/img/trees/16.webp", "Loewe, Solidarity Xmas Tree 2017"],
+    ["/img/trees/1.webp", "Cartier, Solidarity Xmas Tree 2025"],
+    ["/img/trees/2.webp", "Maison Valmont, Solidarity Xmas Tree 2025"],
+    ["/img/trees/3.webp", "Chopard, Solidarity Xmas Tree 2025"],
+    ["/img/trees/4.webp", "Jaeger-LeCoultre, Solidarity Xmas Tree 2025"],
+    ["/img/trees/5.webp", "Loewe, Solidarity Xmas Tree 2025"],
+    ["/img/trees/6.webp", "Zimmermann, Solidarity Xmas Tree 2025"],
+    ["/img/trees/7.webp", "Tod´s, Solidarity Xmas Tree 2025"],
+    ["/img/trees/8.webp", "Suarez, Solidarity Xmas Tree 2025"],
+    ["/img/trees/9.webp", "Stefano Ricci, Solidarity Xmas Tree 2025"],
+    ["/img/trees/10.webp", "Ralph Lauren, Solidarity Xmas Tree 2025"],
+    ["/img/trees/11.webp", "Giorgio Armani, Solidarity Xmas Tree 2025"],
+    ["/img/trees/12.webp", "Chaumet, Solidarity Xmas Tree 2025"],
+    ["/img/trees/13.webp", "Hermes, Solidarity Xmas Tree 2025"],
+    ["/img/trees/14.webp", "IWC, Solidarity Xmas Tree 2025"],
 ];
 
 function isMobile() {
@@ -160,6 +116,7 @@ p {
         padding-left: 25px;
     }
 }
+
 .landing-container {
     display: flex;
     flex-direction: column;
@@ -182,6 +139,7 @@ p {
         @media (max-width: $default-breakpoint) {
             gap: 66px;
         }
+
         .intro-text {
             font-size: 41px;
             font-weight: 250;
@@ -260,7 +218,7 @@ p {
 
             .info-logo {
                 width: 100%;
-                max-width: 123.61px;
+                max-width: 160px;
                 height: auto;
                 margin-bottom: 50px;
 
@@ -294,10 +252,8 @@ p {
             justify-content: center;
             width: 100%;
             background: rgb(232, 100, 100);
-            background: linear-gradient(
-                rgba(232, 100, 100, 1) 3%,
-                rgba(159, 8, 29, 1) 100%
-            );
+            background: linear-gradient(rgba(232, 100, 100, 1) 3%,
+                    rgba(159, 8, 29, 1) 100%);
             padding: 109px 0 88px 0;
             gap: 100px;
 
