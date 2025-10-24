@@ -236,6 +236,7 @@ import Videos from "./Videos.vue";
                     flex-direction: column;
                     padding: 0;
                     align-items: center;
+                    justify-content: center;
                 }
 
                 .friends-image {
@@ -246,6 +247,11 @@ import Videos from "./Videos.vue";
                     flex-direction: column;
                     justify-content: center;
                     align-items: start;
+
+                    @media (max-width: $default-breakpoint) {
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
 
                 .friends-image {
@@ -256,7 +262,7 @@ import Videos from "./Videos.vue";
                     }
                 }
 
-                .friends-info{
+                .friends-info {
                     display: flex;
                     flex-direction: column;
                     flex: 1;
