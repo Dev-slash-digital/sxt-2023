@@ -259,17 +259,17 @@ p {
             justify-content: center;
             width: 100%;
             background: #088296;
-            padding: 109px 0 88px 0;
+            padding: 55px 0 55px 0;
             gap: 100px;
 
             @media (max-width: $default-breakpoint) {
-                padding: 64px 30px 44px 30px;
+                padding: 40px 0px 40px 0px;
                 gap: 44px;
             }
 
             .map-trees {
                 width: 100%;
-                max-width: 573px;
+                max-width: 665px;
                 height: auto;
             }
         }
