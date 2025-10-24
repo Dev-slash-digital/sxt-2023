@@ -85,7 +85,7 @@ const pictures = [
     ["/img/trees/15.webp", "Chanel, Solidarity Xmas Tree 2025"],
     ["/img/trees/16.webp", "Etro, Solidarity Xmas Tree 2025"],
     ["/img/trees/17.webp", "Stella Mc Cartney, Solidarity Xmas Tree 2025"],
-    ["/img/trees/18.webp", "Zimmerman, Solidarity Xmas Tree 2025"],
+    ["/img/trees/18.webp", "Zimmermann, Solidarity Xmas Tree 2025"],
     ["/img/trees/19.webp", "Prada, Solidarity Xmas Tree 2025"],
     ["/img/trees/20.webp", "Loro Piana, Solidarity Xmas Tree 2025"],
     ["/img/trees/21.webp", "Brunello Cucinelli, Solidarity Xmas Tree 2025"],
