@@ -384,8 +384,7 @@ useHead({
                 width: 100%;
                 gap: 15px;
                 padding: 35px 30px 30px 30px;
-                background: linear-gradient(rgba(232, 100, 100, 1) 3%,
-                        rgba(159, 8, 29, 1) 100%);
+                background: #088296;
             }
         }
     }

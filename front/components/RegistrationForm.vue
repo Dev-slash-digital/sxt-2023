@@ -134,25 +134,11 @@ async function submitForm() {
         } catch (error) {
             // if the user was not registered successfully
             if (error.response && error.response.status === 400) {
-                // Check if it's EMAIL_TAKEN error
-                if (error.response.data && typeof error.response.data === 'object') {
-                    const errorData = error.response.data;
-                    if (errorData.email && errorData.email.includes('EMAIL_TAKEN')) {
-                        errors.email = "El email ya está registrado";
-                    } else if (errorData === "BRAND_NOT_FOUND") {
-                        errors.email = "Marca no encontrada";
-                    } else {
-                        errors.email = "Datos inválidos";
-                    }
-                } else {
-                    errors.email = "El email ya está registrado";
-                }
-            } else if (error.response && error.response.status === 500) {
-                // Server error
-                errors.email = "Error del servidor. Por favor, intente más tarde.";
+                // show an error
+                errors.email = "El email ya está registrado";
             } else {
                 // show an error
-                errors.email = "Ha ocurrido un error de conexión";
+                errors.email = "Ha ocurrido un error";
             }
         } finally {
             state.sendingInfo = false;

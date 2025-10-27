@@ -110,6 +110,7 @@ async function login() {
             }
         } catch (error) {
             if (
+                error.response &&
                 error.response.status === 404 &&
                 error.response.data?.detail === "Not found."
             ) {
@@ -183,6 +184,7 @@ useHead({
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 30px;
         align-self: stretch;
 
@@ -207,6 +209,8 @@ useHead({
             align-items: center;
             gap: 48px;
             align-self: stretch;
+            max-width: 507px;
+            width: 100%;
 
             .server-error {
                 color: $error;

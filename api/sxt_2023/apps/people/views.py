@@ -111,16 +111,15 @@ class Register(viewsets.GenericViewSet, CreateModelMixin):
         email = BaseUserManager.normalize_email(request.data["email"])
         brand = Brand.objects.filter(pk=request.data["registration_brand"]).first()
 
-        # TODO: Uncomment when email system is configured
-        # Email.send(
-        #     "registration",
-        #     dict(
-        #         brand=brand.name,
-        #         address=brand.postal_address,
-        #         email=email,
-        #         locale="es",
-        #     ),
-        # )
+        Email.send(
+            "registration",
+            dict(
+                brand=brand.name,
+                address=brand.postal_address,
+                email=email,
+                locale="es",
+            ),
+        )
 
         return Response(
             serializer.data, status=status.HTTP_201_CREATED, headers=headers
