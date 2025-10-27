@@ -12,8 +12,8 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
     }
     if (!isAuth) {
         const email = useCookie("email").value;
+        const tree_id = to.params.tree_id;
         if (email === undefined) {
-            const tree_id = from.params.tree_id;
             return navigateTo(`/scan/${tree_id}/check/`);
         } else {
             try {
@@ -33,7 +33,6 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
                     error.response.status === 404 &&
                     error.response.data?.detail === "Not found."
                 ) {
-                    const tree_id = from.params.tree_id;
                     return navigateTo(`/scan/${tree_id}/check/`);
                 } else {
                     return navigateTo("/");
