@@ -47,13 +47,15 @@ def visit_tree(request, tree_id):
 
             # On seventh visit, send the "raffle" email
             if visits_count == 7:
-                Email.send(
-                    "raffleconfirmation",
-                    dict(
-                        email=request.user.email,
-                        locale="es",
-                    ),
-                )
+                # TODO: Uncomment when email system is configured
+                # Email.send(
+                #     "raffleconfirmation",
+                #     dict(
+                #         email=request.user.email,
+                #         locale="es",
+                #     ),
+                # )
+                pass
 
     return JsonResponse(model_to_dict(brand))
 
