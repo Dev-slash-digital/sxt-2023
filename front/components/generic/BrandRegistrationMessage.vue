@@ -8,7 +8,7 @@
                 <span>{{ postalAddress }}</span>
                 <span style="font-style: italic"> del</span>
                 <span style="font-weight: 400">
-                    19 <span style="font-style: italic">al</span> 25 DE
+                    18 <span style="font-style: italic">al</span> 24 DE
                     NOVIEMBRE</span>
             </p>
             <div class="registration-process">

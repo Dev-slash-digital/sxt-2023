@@ -25,7 +25,7 @@
                     SOLIDARITY XMAS TREE
                     <span style="font-style: italic">del</span>
                     <span style="font-weight: 400">
-                        19 <span style="font-style: italic">AL</span> 25 DE
+                        18 <span style="font-style: italic">AL</span> 24 DE
                         NOVIEMBRE</span>
                 </p>
             </div>
@@ -203,20 +203,18 @@ const props = defineProps({
         align-items: center;
         justify-content: center;
         width: 100%;
-        background: rgb(232, 100, 100);
-        background: linear-gradient(rgba(232, 100, 100, 1) 3%,
-                rgba(159, 8, 29, 1) 100%);
-        padding: 109px 0 66px 0;
+        background: #088296;
+        padding: 55px 0 55px 0;
         gap: 100px;
 
         @media (max-width: $default-breakpoint) {
-            padding: 64px 30px 24px 30px;
+            padding: 40px 30px 40px 30px;
             gap: 44px;
         }
 
         .map-trees {
             width: 100%;
-            max-width: 573px;
+            max-width: 650px;
             height: auto;
         }
     }

@@ -38,9 +38,7 @@ const props = defineProps({
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background: rgb(232, 100, 100);
-    background: linear-gradient(rgba(232, 100, 100, 1) 3%,
-            rgba(159, 8, 29, 1) 100%);
+    background: #088296;
     padding-bottom: 30px;
 
     @media (max-width: $default-breakpoint) {
@@ -73,7 +71,7 @@ const props = defineProps({
 
             .map-trees {
                 width: 100%;
-                max-width: 573px;
+                max-width: 600px;
                 height: auto;
             }
         }

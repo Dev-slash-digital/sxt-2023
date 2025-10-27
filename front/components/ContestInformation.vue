@@ -79,7 +79,7 @@
                         disfrutar del viaje, en esta experiencia única.
                     </p>
                     <div class="more-info-text">
-                        <p style="font-weight: 500">
+                        <p>
                             Un enclave único en Getxo, Bilbao donde la historia
                             se fusiona con la vanguardia.
                         </p>
@@ -353,12 +353,13 @@ const handleShowAdditionalInformation = () => {
                     max-width: 887px;
                     text-align: center;
                     font-style: normal;
-                    font-weight: 300;
-                    font-size: $font-size-small;
-                    line-height: 22px;
-                    letter-spacing: 0.32px;
+                    font-weight: 100;
+                    font-size: $font-size-large-medium;
+                    line-height: 1.2em;
+                    letter-spacing: auto;
                     margin: 0;
                     padding: 0;
+                    text-transform: uppercase;
                 }
 
                 .more-info-text {
@@ -368,12 +369,12 @@ const handleShowAdditionalInformation = () => {
                     transition: max-height 0.3s ease-in-out;
                     text-align: center;
                     font-style: normal;
-                    font-weight: 300;
-                    font-size: $font-size-small;
-                    line-height: 22px;
-                    letter-spacing: 0.32px;
+                    font-weight: 100;
+                    font-size: $font-size-large-medium;
+                    line-height: 1.2em;
                     margin: 0;
                     padding: 0;
+                    text-transform: uppercase;
 
                     .palace-link {
                         text-decoration: none;

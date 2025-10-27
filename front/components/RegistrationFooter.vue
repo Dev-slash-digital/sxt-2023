@@ -4,7 +4,7 @@
             <p class="text-uppercase" style="margin: 0; max-width: 657px">
                 Nuestros partners
             </p>
-            <img src="/img/partners/Abanca.svg" width="186" height="67" />
+            <img src="/img/partners/Abanca.svg" width="186" height="67" style="display:none;"/>
             <div class="footer-carousel">
                 <CustomCarousel :light-buttons="true" :pictures="partnersPictures"></CustomCarousel>
             </div>
@@ -54,26 +54,21 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
 import CustomCarousel from "./CustomCarousel.vue";
 import Instagram from "./svg/Instagram.vue";
 
 const partnersPictures = [
-    ["/img/partners/Christies.svg", ""],
+    ["/img/partners/Abanca.svg", ""],
     ["/img/partners/BMW.svg", ""],
     ["/img/partners/Naturgy.svg", ""],
     ["/img/partners/Galeriascanalejas.svg", ""],
-    ["/img/partners/The objective.svg", ""],
-    ["/img/partners/LG.svg", ""],
+    ["/img/partners/Christies.svg", ""],
     ["/img/partners/Loropiana.svg", ""],
-    ["/img/partners/Chandon.svg", ""],
 ];
 
 const randomPartnersPictures = [
-    ["/img/partners/Mahou-Solan.svg", ""],
-    ["/img/partners/Marques-Cuervo.svg", ""],
-    ["/img/partners/Balbisiana-Cahmere.svg", ""],
     ["/img/partners/Nuevo.svg", ""],
+    ["/img/partners/BANG-OLUFSEN.svg", ""],
 ];
 
 shuffle(randomPartnersPictures);
