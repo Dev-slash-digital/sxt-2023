@@ -201,6 +201,7 @@ useHead({
     align-items: center;
     gap: 32px;
     margin-top: 40px;
+    width: 100%;
 
     .brand-logo {
         display: flex;
