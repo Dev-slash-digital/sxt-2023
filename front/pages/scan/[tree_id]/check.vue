@@ -16,8 +16,7 @@
         <div class="content-form">
             <div v-if="state.noAccount" class="no-account">
                 <p>
-                    <span style="font-style: italic; font-weight: 500"
-                        >No hay una cuenta registrada con este email
+                    <span style="font-style: italic; font-weight: 500">No hay una cuenta registrada con este email
                     </span>
                     <br />
                     Si ya se ha registrado y no se le ha abierto el Mapa de la
@@ -25,8 +24,7 @@
                     correctamente el email con el que se registró.
                 </p>
                 <p>
-                    <span style="font-style: italic; font-weight: 500"
-                        >Si aún no se ha registrado en la ruta <br />
+                    <span style="font-style: italic; font-weight: 500">Si aún no se ha registrado en la ruta <br />
                         Solidarity Xmas Tree,
                     </span>
                     <br />
@@ -35,12 +33,7 @@
                 </p>
             </div>
             <div class="form">
-                <Input
-                    type="email"
-                    v-model="state.email"
-                    :placeholder="'Dirección de email'"
-                    :error="state.error"
-                />
+                <Input type="email" v-model="state.email" :placeholder="'Dirección de email'" :error="state.error" />
                 <Button @handle-click="login">ACCEDER A LA RUTA</Button>
                 <p class="server-error" v-if="state.serverError">
                     Se ha producido un error. Inténtelo de nuevo más tarde
@@ -93,6 +86,7 @@ async function getTreeInfo() {
 
 async function login() {
     state.serverError = false;
+    state.noAccount = false;
     state.error = "";
     if (state.email === "") {
         state.error = "Debe ingresar su dirección de email";
@@ -116,11 +110,15 @@ async function login() {
                 navigateTo(`/scan/${tree_id}/`);
             }
         } catch (error) {
-            if (
-                error.response.status === 404 &&
-                error.response.data?.detail === "Not found."
-            ) {
-                state.noAccount = true;
+            if (error.response) {
+                if (
+                    error.response.status === 404 &&
+                    error.response.data?.detail === "Not found."
+                ) {
+                    state.noAccount = true;
+                } else {
+                    state.serverError = true;
+                }
             } else {
                 state.serverError = true;
             }
@@ -149,6 +147,7 @@ useHead({
 
 <style lang="scss" scoped>
 @import "assets/css/variables";
+
 .check-logo {
     display: flex;
     flex-direction: column;
@@ -179,7 +178,8 @@ useHead({
             font-size: 22px;
             font-style: normal;
             font-weight: 300;
-            line-height: 30px; /* 136.364% */
+            line-height: 30px;
+            /* 136.364% */
             letter-spacing: 1.76px;
         }
     }
@@ -197,6 +197,7 @@ useHead({
             align-items: center;
             gap: 20px;
             text-align: center;
+
             p {
                 font-size: 16px;
                 line-height: 22px;
@@ -218,7 +219,8 @@ useHead({
                 font-size: $font-size-small-mobile;
                 font-style: italic;
                 font-weight: 300;
-                line-height: 22px; /* 137.5% */
+                line-height: 22px;
+                /* 137.5% */
                 letter-spacing: 0.32px;
             }
         }
@@ -229,6 +231,7 @@ useHead({
     display: flex;
     align-items: center;
     justify-content: center;
+
     .loading-dual-ring::after {
         border: 6px solid $primary;
         border-color: $primary transparent $primary transparent;
