@@ -48,7 +48,7 @@
             participación.
         </p>
         <p>
-            El 26 de noviembre del 2024 en el Gran Teatro Real de Madrid, se
+            El 25 de noviembre del 2025 en el Gran Teatro Real de Madrid, se
             escogerá aleatoriamente un número al azar comprendido entre el
             primero y el último número del listado de participantes que hayan
             visitado y validado mínimo 7 árboles de la Ruta SXT.

@@ -36,7 +36,7 @@
                 </p>
                 <div v-if="state.visitsCount < 7" class="text-validate--remaining">
                     <p>
-                        TIENE HASTA EL 25 DE NOVIEMBRE PARA
+                        TIENE HASTA EL 24 DE NOVIEMBRE PARA
                         <span>COMPLETAR LA RUTA</span>
                     </p>
                 </div>
@@ -48,7 +48,7 @@
                 </p>
                 <div v-if="state.visitsCount === 7" class="text-validate--remaining">
                     <p>
-                        TIENE HASTA EL 25 DE NOVIEMBRE PARA VER LOS 8 ÁRBOLES DE
+                        TIENE HASTA EL 24 DE NOVIEMBRE PARA VER LOS 8 ÁRBOLES DE
                         NAVIDAD QUE LE FALTAN PARA <br />
                         <span>COMPLETAR LA RUTA</span>
                     </p>
@@ -60,12 +60,12 @@
                 </p>
                 <div v-if="state.visitsCount > 7 && state.visitsCount < 15" class="text-validate--remaining">
                     <p v-if="state.visitsCount !== 14">
-                        TIENE HASTA EL 25 DE NOVIEMBRE PARA VER LOS
+                        TIENE HASTA EL 24 DE NOVIEMBRE PARA VER LOS
                         {{ 15 - state.visitsCount }} ÁRBOLES DE NAVIDAD QUE LE
                         FALTAN PARA COMPLETAR LA RUTA
                     </p>
                     <p v-else>
-                        TIENE HASTA EL 25 DE NOVIEMBRE PARA VER EL ÚLTIMO ÁRBOL
+                        TIENE HASTA EL 24 DE NOVIEMBRE PARA VER EL ÚLTIMO ÁRBOL
                         DE NAVIDAD QUE LE FALTA PARA COMPLETAR LA RUTA
                     </p>
                 </div>
