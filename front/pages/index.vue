@@ -228,6 +228,7 @@ p {
                 max-width: 160px;
                 height: auto;
                 margin-bottom: 50px;
+                filter: invert(1);
 
                 @media (max-width: $default-breakpoint) {
                     max-width: 83.25px;
