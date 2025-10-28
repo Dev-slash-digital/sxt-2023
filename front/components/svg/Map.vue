@@ -2530,19 +2530,17 @@ onMounted(async () => {
 
 .pink {
     fill: #D5D400;
-    animation: pulse 2s ease-in-out infinite;
-    transform-origin: center;
+    animation: breathe 2s ease-in-out infinite;
+    transform-origin: center center;
+    transform-box: fill-box;
 }
 
-@keyframes pulse {
-    0% {
+@keyframes breathe {
+    0%, 100% {
         transform: scale(1);
     }
     50% {
         transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
     }
 }
 </style>
