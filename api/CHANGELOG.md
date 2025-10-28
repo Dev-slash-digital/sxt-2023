@@ -29,9 +29,9 @@ Este archivo documenta todos los cambios realizados durante la migración del pr
 #### 4. Migración de Base de Datos
 - **Cambio principal**: Migración completa de SQLite a PostgreSQL
 - **Configuración PostgreSQL**:
-  - Usuario: `sxt_2023`
-  - Contraseña: `sxt_2023`
-  - Base de datos: `sxt_2023`
+  - Usuario: `sxtadmin`
+  - Contraseña: `sxtadmin`
+  - Base de datos: `sxtadmin`
   - Puerto: `5432` (por defecto)
 - **Dependencias instaladas**:
   - `psycopg2-binary==2.9.11` (conector PostgreSQL)
@@ -88,8 +88,8 @@ Este archivo documenta todos los cambios realizados durante la migración del pr
 - **Python**: 3.13.3
 - **Django**: 5.1.3
 - **Base de datos**: PostgreSQL 18.0
-- **Usuario DB**: sxt_2023
-- **Base de datos**: sxt_2023
+- **Usuario DB**: sxtadmin - david.ortiz@slash-digital.io
+- **Base de datos**: sxtadmin
 - **Puerto**: 5432
 - **Servidor**: http://127.0.0.1:8000/
 

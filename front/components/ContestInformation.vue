@@ -210,6 +210,7 @@ const handleShowAdditionalInformation = () => {
         align-items: center;
 
         .landing-contest-process-text {
+            overflow: hidden;
             max-width: 870px;
             text-align: center;
             font-style: normal;
@@ -222,6 +223,8 @@ const handleShowAdditionalInformation = () => {
             @media (max-width: $default-breakpoint) {
                 max-width: 349px;
                 width: 100%;
+                font-size: $font-size-large-medium;
+                line-height: 1.2em;
             }
         }
 
@@ -360,6 +363,10 @@ const handleShowAdditionalInformation = () => {
                     margin: 0;
                     padding: 0;
                     text-transform: uppercase;
+                    @media (max-width: $default-breakpoint) {
+                        font-size: $font-size-medium;
+                        line-height: 1.2em;
+                    }
                 }
 
                 .more-info-text {
@@ -375,6 +382,9 @@ const handleShowAdditionalInformation = () => {
                     margin: 0;
                     padding: 0;
                     text-transform: uppercase;
+                    @media (max-width: $default-breakpoint) {
+                        font-size: $font-size-medium;
+                    }
 
                     .palace-link {
                         text-decoration: none;

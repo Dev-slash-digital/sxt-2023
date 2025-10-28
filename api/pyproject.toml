@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "sxt_2023"
+name = "sxt_2025"
 version = "0.1.0"
 description = ""
-authors = ["juanmarcos <juan.cabezas@slash-digital.io>"]
+authors = ["David Ortiz <david.ortiz@slash-digital.io>"]
 license = "Proprietary"
 
 packages = [

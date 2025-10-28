@@ -146,7 +146,7 @@ import Videos from "./Videos.vue";
 
             @media (max-width: $default-breakpoint) {
                 width: 100%;
-                font-size: $font-size-large;
+                font-size: $font-size-large-medium;
                 text-align: center;
                 padding-right: 25px;
                 padding-left: 25px;
@@ -282,13 +282,11 @@ import Videos from "./Videos.vue";
                         flex-direction: column;
                         align-items: center;
                         gap: 15px;
-
                         margin-top: 0;
                     }
 
                     p {
                         margin: 0;
-
                         font-size: $font-size-small;
                         font-style: normal;
                         font-weight: 300;
