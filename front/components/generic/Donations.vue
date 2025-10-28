@@ -283,6 +283,7 @@ import Videos from "./Videos.vue";
                         align-items: center;
                         gap: 15px;
                         margin-top: 0;
+                        max-width: 100%;
                     }
 
                     p {

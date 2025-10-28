@@ -220,6 +220,7 @@ useHead({
         flex-direction: column;
         align-items: center;
         gap: 90px;
+        width: 100%;
 
         .info-banner {
             display: flex;
@@ -333,7 +334,7 @@ useHead({
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                align-self: stretch;
+                align-self: center;
 
                 p {
                     color: $text-color-primary;
