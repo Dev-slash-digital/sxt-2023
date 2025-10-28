@@ -110,15 +110,13 @@ async function login() {
                 navigateTo(`/scan/${tree_id}/`);
             }
         } catch (error) {
-            if (error.response) {
-                if (
-                    error.response.status === 404 &&
-                    error.response.data?.detail === "Not found."
-                ) {
-                    state.noAccount = true;
-                } else {
-                    state.serverError = true;
-                }
+            console.log("Error completo:", error);
+            console.log("Error response:", error.response);
+            console.log("Error status:", error.response?.status);
+            console.log("Error data:", error.response?.data);
+
+            if (error.response && error.response.status === 404) {
+                state.noAccount = true;
             } else {
                 state.serverError = true;
             }
