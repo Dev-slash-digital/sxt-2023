@@ -2505,5 +2505,19 @@ onMounted(async () => {
 <style lang="scss" scoped>
 .pink {
     fill: #D5D400;
+    animation: pulse 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 </style>

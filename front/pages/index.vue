@@ -231,7 +231,6 @@ p {
 
                 @media (max-width: $default-breakpoint) {
                     max-width: 83.25px;
-
                     margin-bottom: 40px;
                 }
             }
