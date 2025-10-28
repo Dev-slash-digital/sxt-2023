@@ -103,6 +103,7 @@ function shuffle(array) {
     background-color: $secondary;
     padding-top: 58px;
     gap: 40px;
+    width: 100%;
 
     .footer-partners {
         display: flex;

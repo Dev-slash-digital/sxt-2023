@@ -297,6 +297,10 @@ useHead({
             justify-content: center;
             align-items: flex-start;
             gap: 32px;
+            max-width: 900px;
+            @media (max-width: $default-breakpoint) {
+                max-width: 325px;
+    }
 
             .text-validate--progress {
                 color: $text-color-primary;
