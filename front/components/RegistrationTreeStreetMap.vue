@@ -108,6 +108,7 @@ const props = defineProps({
                 width: 100%;
                 height: auto;
                 padding: 0;
+                filter: invert(1);
 
                 @media (max-width: $default-breakpoint) {
                     max-width: 108px;

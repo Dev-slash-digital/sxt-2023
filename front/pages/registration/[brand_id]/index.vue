@@ -57,7 +57,7 @@ async function getBrandInfo() {
         if (res.status === 200) {
             state.brand = res.data;
             if (res.data.slug === "sxt") {
-                state.brandLogo = "/img/brands/sxt2.svg";
+                state.brandLogo = "/img/brands/sxt.svg";
             } else if (res.data.slug === "foundations") {
                 state.brandLogo = "/img/brands/galerias.svg";
             } else {
