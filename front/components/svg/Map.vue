@@ -1,5 +1,5 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" width="941" height="1842" viewBox="0 0 941 1842" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 941 1842" fill="none" class="responsive-map">
         <path
             d="M814.254 300.936L595.428 605.097L262.613 343.229L445.669 154.645C549.87 72.5659 620.634 121.939 667.316 163.066L814.259 300.936H814.254Z"
             fill="#69B5A8" />
@@ -2503,6 +2503,31 @@ onMounted(async () => {
 </script>
 
 <style lang="scss" scoped>
+.responsive-map {
+    width: 100%;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .responsive-map {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-map {
+        width: 100%;
+        height: auto;
+        max-height: 70vh;
+    }
+}
+
 .pink {
     fill: #D5D400;
     animation: pulse 2s ease-in-out infinite;
