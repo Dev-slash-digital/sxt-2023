@@ -298,9 +298,10 @@ useHead({
             align-items: flex-start;
             gap: 32px;
             max-width: 900px;
+
             @media (max-width: $default-breakpoint) {
                 max-width: 325px;
-    }
+            }
 
             .text-validate--progress {
                 color: $text-color-primary;
@@ -351,7 +352,8 @@ useHead({
             }
         }
 
-        .info-map { //cambio temporal
+        .info-map {
+            //cambio temporal
             display: flex;
             width: 100%;
             flex-direction: column;

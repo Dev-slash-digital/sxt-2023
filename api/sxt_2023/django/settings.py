@@ -2,7 +2,7 @@ import os
 from importlib import metadata
 
 REST_FRAMEWORK = {}
-BASE_URL = None
+BASE_URL = os.getenv('BASE_URL', 'http://127.0.0.1:3000')
 
 
 def get_package_version() -> str:
