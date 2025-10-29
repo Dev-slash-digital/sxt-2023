@@ -63,7 +63,7 @@ async function getBrandInfo() {
             // store the brand info
             state.brand = res.data;
             if (state.brand.slug === "foundations") {
-                state.brandLogo = "/img/partners/Galeriascanalejas.svg";
+                state.brandLogo = "/img/partners/Galeriascanalejas-white.svg";
             } else {
                 state.brandLogo = `/img/brands/${state.brand.slug}.svg`;
             }
