@@ -65,7 +65,7 @@ const props = defineProps({
 
             @media (max-width: $default-breakpoint) {
                 margin: 64px 0 0 0;
-                padding: 0 24px 0 24px;
+                padding: 0px;
                 gap: 44px;
             }
 
