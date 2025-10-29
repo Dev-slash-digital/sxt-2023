@@ -45,7 +45,6 @@ const partnersPictures = [
     ["/img/partners/Naturgy.svg", ""],
     ["/img/partners/Galeriascanalejas.svg", ""],
     ["/img/partners/Christies.svg", ""],
-    ["/img/partners/Loropiana.svg", ""],
 ];
 
 const randomPartnersPictures = [

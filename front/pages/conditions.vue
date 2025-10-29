@@ -8,8 +8,8 @@
         <p style="margin-bottom: 20px">
             Los datos personales proporcionados por usted con el fin de
             participar en La Ruta Solidarity Xmas Tree se conservarán hasta la
-            realización del sorteo para la adjudicación del premio el 26 de
-            noviembre de 2024 o hasta que usted ejerza su derecho de cancelación
+            realización del sorteo para la adjudicación del premio el 25 de
+            noviembre de 2025 o hasta que usted ejerza su derecho de cancelación
             enviando su solicitud de cancelación a info@togetherplus.es. Los
             datos se destruirán pasados 15 días laborables posteriores al sorteo
             y, en ningún caso, se cederán a terceros.
