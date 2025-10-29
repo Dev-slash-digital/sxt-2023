@@ -329,8 +329,8 @@ const handleShowAdditionalInformation = () => {
             background: url("~/assets/img/registration/contest-grant.png") lightgray 50% / cover no-repeat;
 
             @media (max-width: $default-breakpoint) {
-                width: 100%;
-                height: auto;
+                height: 225px;
+                width: -webkit-fill-available;
             }
         }
 
@@ -361,6 +361,7 @@ const handleShowAdditionalInformation = () => {
                     letter-spacing: auto;
                     margin: 0;
                     padding: 0;
+
                     @media (max-width: $default-breakpoint) {
                         font-size: $font-size-medium;
                         line-height: 1.2em;
@@ -379,6 +380,7 @@ const handleShowAdditionalInformation = () => {
                     line-height: 1.2em;
                     margin: 0;
                     padding: 0;
+
                     @media (max-width: $default-breakpoint) {
                         font-size: $font-size-medium;
                     }

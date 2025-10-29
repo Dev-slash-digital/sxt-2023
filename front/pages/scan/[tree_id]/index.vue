@@ -402,7 +402,8 @@ useHead({
                 background: #088296;
 
                 @media (max-width: $default-breakpoint) {
-                    padding: 0px;
+                    padding: 20px 0px;
+                    overflow: hidden;
                 }
             }
         }
