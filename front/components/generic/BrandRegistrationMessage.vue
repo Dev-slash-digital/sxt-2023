@@ -2,19 +2,16 @@
     <div class="main-brand-container">
         <div class="brand-message-container">
             <p v-if="props.brandSlug !== 'sxt'">
-                EL
-                <span style="font-weight: 400; text-transform: uppercase">ÁRBOL DE NAVIDAD SOLIDARIO DE {{ brandName
-                    }}</span>, <span style="font-style: italic">estará</span> EXPUESTO EN SU BOUTIQUE DE
-                <span>{{ postalAddress }}</span>
-                <span style="font-style: italic"> del</span>
-                <span style="font-weight: 400">
-                    18 <span style="font-style: italic">al</span> 24 DE
-                    NOVIEMBRE</span>
+                EL <span style="font-weight: 400; text-transform: uppercase">ÁRBOL DE NAVIDAD SOLIDARIO DE {{ brandName
+                    }}</span>, <span style="font-style: italic">estará</span> EXPUESTO <template
+                    v-if="props.brandSlug === 'foundations'">en <span>{{ postalAddress }}</span></template><template
+                    v-else>EN SU BOUTIQUE DE <span>{{ postalAddress }}</span></template> <span
+                    style="font-style: italic">del</span>
+                <span style="font-weight: 400">18 <span style="font-style: italic">al</span> 24 DE NOVIEMBRE</span>
             </p>
             <div class="registration-process">
                 <p class="registration-process-text">
-                    ¡VISITE, VALIDE
-                    <span style="font-style: italic">y</span> GANE!
+                    ¡VISITE, VALIDE <span style="font-style: italic">y</span> GANE!
                 </p>
             </div>
         </div>
