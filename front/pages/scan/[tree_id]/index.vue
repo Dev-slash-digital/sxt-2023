@@ -222,6 +222,10 @@ useHead({
         gap: 90px;
         width: 100%;
 
+        @media (max-width: $default-breakpoint) {
+            gap: 30px;
+        }
+
         .info-banner {
             display: flex;
             width: 100%;
@@ -298,11 +302,13 @@ useHead({
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            gap: 32px;
+            gap: 30px;
             max-width: 900px;
 
             @media (max-width: $default-breakpoint) {
                 max-width: 325px;
+                padding: 0px;
+                gap: 15px;
             }
 
             .text-validate--progress {
@@ -314,6 +320,7 @@ useHead({
                 line-height: 30px;
                 /* 136.364% */
                 letter-spacing: 1.76px;
+                margin: 0px;
 
                 span {
                     font-weight: 500;
@@ -391,8 +398,12 @@ useHead({
                 justify-content: center;
                 width: 100%;
                 gap: 15px;
-                padding: 35px 30px 30px 30px;
+                padding: 30px 0px 30px 0px;
                 background: #088296;
+
+                @media (max-width: $default-breakpoint) {
+                    padding: 0px;
+                }
             }
         }
     }

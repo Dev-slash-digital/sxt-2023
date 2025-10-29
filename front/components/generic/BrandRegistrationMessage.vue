@@ -4,7 +4,7 @@
             <p v-if="props.brandSlug !== 'sxt'">
                 EL
                 <span style="font-weight: 400; text-transform: uppercase">ÁRBOL DE NAVIDAD SOLIDARIO DE {{ brandName
-                    }}</span>, <span style="font-style: italic">estará</span> EXPUESTO
+                    }}</span>, <span style="font-style: italic">estará</span> EXPUESTO EN SU BOUTIQUE DE
                 <span>{{ postalAddress }}</span>
                 <span style="font-style: italic"> del</span>
                 <span style="font-weight: 400">

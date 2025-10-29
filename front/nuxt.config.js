@@ -61,7 +61,14 @@ export default {
                 dir: 'public/img',
                 maxAge: 60 * 60 * 24 * 7 // 7 days
             }
-        ]
+        ],
+        routeRules: {
+            '/assets/img/maps/**': {
+                headers: {
+                    'X-Robots-Tag': 'noindex, nofollow'
+                }
+            }
+        }
     },
     router: {
         options: {

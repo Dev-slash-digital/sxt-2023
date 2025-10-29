@@ -102,6 +102,7 @@ function shuffle(array) {
             line-height: 30px;
             /* 136.364% */
             letter-spacing: 1.76px;
+            color: #094752;
 
             @media (max-width: $default-breakpoint) {
                 font-size: $font-size-medium;
