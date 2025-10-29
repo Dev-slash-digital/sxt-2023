@@ -330,7 +330,7 @@ const handleShowAdditionalInformation = () => {
 
             @media (max-width: $default-breakpoint) {
                 width: 100%;
-                height: 225px;
+                height: auto;
             }
         }
 
