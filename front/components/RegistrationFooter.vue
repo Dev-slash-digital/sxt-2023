@@ -2,9 +2,9 @@
     <div id="partners" class="footer-container">
         <div class="footer-partners">
             <p class="text-uppercase" style="margin: 0; max-width: 657px">
-                Nuestros partners
+                NUESTROS COLABORADORES
             </p>
-            <img src="/img/partners/Abanca.svg" width="186" height="67" style="display:none;"/>
+            <img src="/img/partners/Abanca.svg" width="186" height="67" style="display:none;" />
             <div class="footer-carousel">
                 <CustomCarousel :light-buttons="true" :pictures="partnersPictures"></CustomCarousel>
             </div>
