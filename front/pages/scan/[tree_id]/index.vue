@@ -400,6 +400,7 @@ useHead({
                 gap: 15px;
                 padding: 30px 0px 30px 0px;
                 background: #088296;
+                height: 100vh;
 
                 @media (max-width: $default-breakpoint) {
                     padding: 20px 0px;

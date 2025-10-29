@@ -2516,7 +2516,7 @@ onMounted(async () => {
     .responsive-map {
         width: 100%;
         height: auto;
-        max-height: 80vh;
+        max-height: 100%;
     }
 }
 
@@ -2524,7 +2524,7 @@ onMounted(async () => {
     .responsive-map {
         width: 100%;
         height: auto;
-        max-height: 70vh;
+        max-height: 100%;
     }
 }
 
