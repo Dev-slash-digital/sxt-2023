@@ -3,8 +3,8 @@
         <div class="landing-welcome">
             <div class="registration-welcome">
                 <img :class="props.brandSlug !== 'sxt'
-                        ? 'registration-welcome-brand-logo'
-                        : 'registration-welcome-brand-logo-sxt'
+                    ? 'registration-welcome-brand-logo'
+                    : 'registration-welcome-brand-logo-sxt'
                     " :src="brandLogo" />
                 <p class="registration-welcome-text">
                     Le da la bienvenida a la ruta solidarity xmas tree
@@ -105,6 +105,7 @@ const props = defineProps({
 
             .registration-welcome-brand-logo-sxt {
                 width: 100%;
+                max-width: 300px;
                 height: auto;
                 padding: 0;
                 filter: invert(1);
