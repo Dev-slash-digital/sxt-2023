@@ -1,7 +1,17 @@
 <template>
     <div class="donations-container">
         <div class="donations-videos">
+            
             <SmallTree id="foundations" class="donations-smalltree" style="margin: 0 auto"></SmallTree>
+            <p style="margin-top: 40px">
+                EL PODER TRANFORMADOR DE LA FORMACIÓN
+            </p>
+            <p style="margin-top: 40px" class="texto-oportunidades">
+                Que la formación da oportunidades a todos, es un hecho, pero hay tres colectivos para los que tener acceso a una formación de calidad es más difícil que para el resto. Para esas personas, poder formarse es especialmente importante y hacerlo supone un cambio de 180° en sus vidas.
+            </p>
+            <div class="videos">
+                <Videos></Videos>
+            </div>
             <p style="margin-top: 40px">
                 HAY MUCHAS FORMAS <span style="font-style: italic">de</span> CAMBIAR <span
                     style="font-style: italic">el</span> MUNDO. UNA DE ELLAS ES CREER EN EL POTENCIAL <span
@@ -10,9 +20,7 @@
                 EL 25 DE NOVIEMBRE <span style="font-style: italic">los</span> ÁRBOLES SERÁN SUBASTADOS A BENEFICIO
                 <span style="font-style: italic">de</span>:
             </p>
-            <div class="videos" style="display:none;">
-                <Videos></Videos>
-            </div>
+
         </div>
         <div class="donations-info">
             <div class="donations-header" style="display:none;">
@@ -153,10 +161,20 @@ import Videos from "./Videos.vue";
             }
         }
 
+        .texto-oportunidades {
+            margin: 0;
+            font-weight: 250;
+            font-size: $font-size-medium;
+            font-style: normal;
+            line-height: 1.2em;
+            width: 900px;
+            text-transform: uppercase;
+        }
+
         .videos {
             width: 900px;
-            margin-bottom: 100px;
-            margin-top: 40px;
+            margin-bottom: 50px;
+            margin-top: 50px;
 
             @media (max-width: $default-breakpoint) {
                 width: 100%;
