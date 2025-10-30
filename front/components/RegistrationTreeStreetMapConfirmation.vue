@@ -58,15 +58,14 @@ const props = defineProps({
             align-items: center;
             justify-content: center;
             width: 100%;
-
+            padding: 55px 0px;
             max-width: $max-width-lg;
-            margin: 109px 0 0 0;
+            margin: 0px;
             gap: 100px;
 
             @media (max-width: $default-breakpoint) {
-                margin: 64px 0 0 0;
+                margin: 0px;
                 padding: 0px;
-                gap: 44px;
             }
 
             .map-trees {
