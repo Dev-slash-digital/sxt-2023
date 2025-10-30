@@ -181,6 +181,7 @@ import Videos from "./Videos.vue";
             @media (max-width: $default-breakpoint) {
                 width: 100%;
                 margin-top: 32px;
+                margin-bottom: 10px;
             }
         }
     }
