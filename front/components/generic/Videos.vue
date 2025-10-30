@@ -1,30 +1,51 @@
 <template>
     <div class="videos-container">
         <div class="main-video">
-            <div v-if="!state.isPlaying" class="video-preview" @click="playVideo">
-                <img src="https://img.youtube.com/vi/iiysyYpBHcI/maxresdefault.jpg" alt="Video preview">
-                <div class="play-button">
-                    <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
-                        <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
-                        <path d="M 45,24 27,14 27,34" fill="#fff"></path>
-                    </svg>
-                </div>
-            </div>
-            <iframe v-else src="https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe :src="state.videoSource" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
         </div>
     </div>
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, onMounted } from "vue";
 
 const state = reactive({
-    isPlaying: false,
+    index: 0,
+    videoSource:
+        "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr",
 });
 
-function playVideo() {
-    state.isPlaying = true;
+function getVideoSource() {
+    if (state.index === 0) {
+        state.videoSource =
+            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+    } else {
+        state.videoSource =
+            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+    }
 }
+
+function getFirstVideo() {
+    if (state.index === 0) {
+        state.videoSource =
+            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+    } else {
+        state.videoSource =
+            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+    }
+}
+
+function changeVideoSource(index) {
+    state.index = index;
+    getVideoSource();
+}
+
+onMounted(() => {
+    state.index = Math.round(Math.random());
+    getFirstVideo();
+});
 </script>
 
 <style lang="scss" scoped>
@@ -42,39 +63,54 @@ function playVideo() {
 
     .main-video {
         width: 100%;
-        position: relative;
 
         iframe {
             aspect-ratio: 16 / 9;
             width: 100%;
         }
+    }
 
-        .video-preview {
-            position: relative;
+    .videos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        @media (max-width: $default-breakpoint) {
+            gap: 15px;
+        }
+
+        .friends,
+        .mothers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+
+            p {
+                margin-top: 10px;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1.4px;
+                padding: 0;
+            }
+        }
+
+        img {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            height: auto;
+            max-width: 304px;
             cursor: pointer;
-            overflow: hidden;
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
+            @media (max-width: $default-breakpoint) {
+                max-width: 150px;
             }
+        }
 
-            .play-button {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 68px;
-                height: 48px;
-                transition: transform 0.2s;
-
-                &:hover {
-                    transform: translate(-50%, -50%) scale(1.1);
-                }
-            }
+        img:not(.active) {
+            opacity: 0.5;
         }
     }
 }
