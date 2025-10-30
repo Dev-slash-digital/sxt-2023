@@ -3,15 +3,15 @@
         <div class="brand-message-container">
             <p v-if="props.brandSlug !== 'sxt'">
                 EL <span style="font-weight: 400; text-transform: uppercase">ÁRBOL DE NAVIDAD SOLIDARIO DE {{ brandName
-                }}</span>, <span style="font-style: italic">estará</span> EXPUESTO <template
-                    v-if="props.brandSlug === 'foundations'">en<br>
-                    <span>{{ postalAddress }}</span><br>
+                    }}</span>, <span style="font-style: italic">estará</span> EXPUESTO
+                <template v-if="props.brandSlug === 'foundations'">
+                    EN<br><span>{{ postalAddress }}</span><br>
                 </template>
-                <template v-else>EN SU BOUTIQUE DE<br>
-                    <span>{{ postalAddress }}</span><br>
+                <template v-else>
+                    EN SU BOUTIQUE DE<br><span>{{ postalAddress }}</span><br>
                 </template>
-                <span style="font-style: italic">del</span>
-                <span style="font-weight: 400"> 18 <span style="font-style: italic">al</span> 24 DE NOVIEMBRE</span>
+                <span style="font-style: italic">del</span> <span style="font-weight: 400">18</span> <span
+                    style="font-style: italic">al</span> <span style="font-weight: 400">24 DE NOVIEMBRE</span>
             </p>
             <div class="registration-process">
                 <p class="registration-process-text">
@@ -93,8 +93,7 @@ const props = defineProps({
                 @media (max-width: $default-breakpoint) {
                     width: 100%;
                     font-size: $font-size-large-mobile;
-                    line-height: 36px;
-                }
+                    line-height: 36px;  }
             }
         }
     }
