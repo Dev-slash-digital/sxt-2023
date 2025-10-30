@@ -262,7 +262,7 @@ p {
             gap: 100px;
 
             @media (max-width: $default-breakpoint) {
-                padding: 0px;
+                padding: 15px 0px;
                 gap: 44px;
             }
 
