@@ -51,15 +51,13 @@ const props = defineProps({
     width: 100%;
     height: auto;
 
-    .yellow-tree-container {
-        max-width: 360px;
+    @media (max-width: $default-breakpoint) {
+        gap: 40px;
+        padding: 40px 46px 40px 46px;
     }
 
-    @media (max-width: $default-breakpoint) {
-        gap: 50px;
-        padding: 80px 46px 80px 46px;
-        width: 100%;
-        height: auto;
+    .yellow-tree-container {
+        max-width: 360px;
     }
 
     .registration-message-text {
