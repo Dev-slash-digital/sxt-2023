@@ -32,7 +32,7 @@
     <mj-section background-url="/back/static/mails/background.png" text-align="center">
       <mj-column width="100%">
         <mj-text padding="0 10% 0 10%" mj-class="font_normal" align="center">
-          El árbol de Navidad solidario de {{ brand }} estará expuesto {{ address }} del 19 al 25 de noviembre dentro de la Ruta Solidarity Xmas Tree
+          El árbol de Navidad solidario de {{ brand }} estará expuesto {{ address }} del 18 al 24 de noviembre dentro de la Ruta Solidarity Xmas Tree
         </mj-text>
       </mj-column>
     </mj-section>

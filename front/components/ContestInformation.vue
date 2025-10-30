@@ -61,7 +61,9 @@
             </p>
         </div>
         <div class="landing-contest-grant">
-            <div class="landing-contest-grant-img"></div>
+            <div class="landing-contest-grant-img">
+                <img src="~/assets/img/registration/contest-grant.png" alt="">
+            </div>
             <div class="landing-contest-grant-detail">
                 <div :class="{
                     'landing-contest-grant-info': true,

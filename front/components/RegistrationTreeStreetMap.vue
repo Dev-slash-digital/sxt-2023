@@ -216,6 +216,7 @@ const props = defineProps({
             width: 100%;
             max-width: 650px;
             height: auto;
+            padding: 15px 0px;
         }
     }
 }
