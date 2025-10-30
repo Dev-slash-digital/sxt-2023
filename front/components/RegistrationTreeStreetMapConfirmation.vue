@@ -41,10 +41,6 @@ const props = defineProps({
     background: #088296;
     padding-bottom: 30px;
 
-    @media (max-width: $default-breakpoint) {
-        padding-bottom: 20px;
-    }
-
     .landing-welcome {
         display: flex;
         flex-direction: column;
