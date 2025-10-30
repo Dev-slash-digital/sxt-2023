@@ -39,7 +39,6 @@ const props = defineProps({
     align-items: center;
     width: 100%;
     background: #088296;
-    padding-bottom: 30px;
 
     .landing-welcome {
         display: flex;

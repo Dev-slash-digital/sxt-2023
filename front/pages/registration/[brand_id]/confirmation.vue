@@ -103,7 +103,7 @@ onBeforeMount(async () => {
     padding-bottom: 100px;
 
     @media (max-width: $default-breakpoint) {
-        gap: 80px;
+        gap: 45px;
     }
 }
 
