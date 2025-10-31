@@ -215,6 +215,7 @@ WAILER_EMAIL_TYPES = {
 }
 
 WAILER_BASE_URL = os.getenv("WAILER_BASE_URL", BASE_URL)
+WAILER_SEND_SYNC = True  # Enviar emails inmediatamente en lugar de encolarlos
 
 DEFAULT_FROM_EMAIL = os.getenv(
     "DEFAULT_FROM_EMAIL",
