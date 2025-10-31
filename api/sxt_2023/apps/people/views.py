@@ -7,7 +7,7 @@ from rest_framework.decorators import action
 from rest_framework.mixins import CreateModelMixin
 from rest_framework.request import Request
 from rest_framework.response import Response
-# from wailer.models import Email  # Temporarily commented out
+from wailer.models import Email
 
 from sxt_2023.apps.sxt2023_api.models import Brand
 
@@ -111,16 +111,15 @@ class Register(viewsets.GenericViewSet, CreateModelMixin):
         email = BaseUserManager.normalize_email(request.data["email"])
         brand = Brand.objects.filter(pk=request.data["registration_brand"]).first()
 
-        # TODO: Configure email system (Wailer/Mandrill)
-        # Email.send(
-        #     "registration",
-        #     dict(
-        #         brand=brand.name,
-        #         address=brand.postal_address,
-        #         email=email,
-        #         locale="es",
-        #     ),
-        # )
+        Email.send(
+            "registration",
+            dict(
+                brand=brand.name,
+                address=brand.postal_address,
+                email=email,
+                locale="es",
+            ),
+        )
 
         return Response(
             serializer.data, status=status.HTTP_201_CREATED, headers=headers
