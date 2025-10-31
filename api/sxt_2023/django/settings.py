@@ -222,13 +222,11 @@ DEFAULT_FROM_EMAIL = os.getenv(
 )
 
 # ---
-# Email Backend (Mailgun)
+# Email Backend (Mandrill)
 # ---
 
-EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
+EMAIL_BACKEND = 'anymail.backends.mandrill.EmailBackend'
 
 ANYMAIL = {
-    "MAILGUN_API_KEY": os.getenv("MAILGUN_API_KEY"),
-    "MAILGUN_SENDER_DOMAIN": os.getenv("MAILGUN_DOMAIN", "solidarityxmastree.com"),
-    "MAILGUN_API_URL": "https://api.eu.mailgun.net/v3",  # Región EU
+    "MANDRILL_API_KEY": os.getenv("MANDRILL_API_KEY", os.getenv("MAILGUN_API_KEY")),
 }
