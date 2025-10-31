@@ -364,6 +364,28 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-anymail"
+version = "11.1"
+description = "Django email backends and webhooks for Amazon SES, Brevo,  MailerSend, Mailgun, Mailjet, Mandrill, Postal, Postmark, Resend,  SendGrid, SparkPost and Unisender Go  (EmailBackend, transactional email tracking and inbound email signals)"
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "django_anymail-11.1-py3-none-any.whl", hash = "sha256:f1a5b2de713f46fbdf311f875a9546511e4aa9bfa1c3f8350d21b43e75579acc"},
+    {file = "django_anymail-11.1.tar.gz", hash = "sha256:ec373c0a2d79f5e6a3ecda819c8087af0b0e114e4ec1d8576dea4c786f9b2a59"},
+]
+
+[package.dependencies]
+django = ">=2.0"
+requests = ">=2.4.3"
+urllib3 = ">=1.25.0"
+
+[package.extras]
+amazon-ses = ["boto3 (>=1.10.17)"]
+postal = ["cryptography ; sys_platform != \"darwin\" or platform_machine != \"arm64\" or python_version >= \"3.9\""]
+resend = ["svix"]
+
+[[package]]
 name = "django-phonenumber-field"
 version = "8.3.0"
 description = "An international phone number field for django models."
@@ -1641,4 +1663,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.13"
-content-hash = "0847c9faaeab39dd93e2f4121953e53da3f0aee6fbf0f6de58ecc0d8bc60043e"
+content-hash = "dcea722761a2ee6f2278c94ddbcd25b38fc4ed3a93dc1ca99044e3c657b895a0"
