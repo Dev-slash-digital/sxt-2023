@@ -14,26 +14,26 @@ import { reactive, onMounted } from "vue";
 const state = reactive({
     index: 0,
     videoSource:
-        "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr",
+        "https://www.youtube.com/embed/Mwm9yJVvXrA?si=TF-Nl9LtF9AMdZ9L",
 });
 
 function getVideoSource() {
     if (state.index === 0) {
         state.videoSource =
-            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+            "https://www.youtube.com/embed/Mwm9yJVvXrA?si=TF-Nl9LtF9AMdZ9L";
     } else {
         state.videoSource =
-            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+            "https://www.youtube.com/embed/Mwm9yJVvXrA?si=TF-Nl9LtF9AMdZ9L";
     }
 }
 
 function getFirstVideo() {
     if (state.index === 0) {
         state.videoSource =
-            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+            "https://www.youtube.com/embed/Mwm9yJVvXrA?si=TF-Nl9LtF9AMdZ9L";
     } else {
         state.videoSource =
-            "https://www.youtube.com/embed/iiysyYpBHcI?si=B6Icguc9EmOR7Hcr";
+            "https://www.youtube.com/embed/Mwm9yJVvXrA?si=TF-Nl9LtF9AMdZ9L";
     }
 }
 
