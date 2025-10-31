@@ -108,7 +108,7 @@ INSTALLED_APPS = [
     "drf_spectacular_sidecar",
     "sxt_2023.apps.people",
     "sxt_2023.apps.sxt2023_api",
-    # "wailer",  # Temporarily commented out
+    "wailer",
 ]
 
 # ---
@@ -220,3 +220,14 @@ DEFAULT_FROM_EMAIL = os.getenv(
     "DEFAULT_FROM_EMAIL",
     "Solidarity Xmax Tree <no-reply@solidarityxmastree.com>",
 )
+
+# ---
+# Email Backend (Mailgun)
+# ---
+
+EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
+
+ANYMAIL = {
+    "MAILGUN_API_KEY": os.getenv("MAILGUN_API_KEY"),
+    "MAILGUN_SENDER_DOMAIN": os.getenv("MAILGUN_DOMAIN", "solidarityxmastree.com"),
+}
