@@ -20,6 +20,7 @@ django-wailer = "^1.0.0b4"
 psycopg2-binary = "^2.9.9"
 django-postgres-extra = "^2.0.8"
 dj-database-url = "^2.1.0"
+django-anymail = {extras = ["mailgun"], version = "^11.0"}
 
 [tool.poetry.dev-dependencies]
 black = "*"
