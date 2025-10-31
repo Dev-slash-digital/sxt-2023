@@ -222,7 +222,7 @@ DEFAULT_FROM_EMAIL = os.getenv(
 )
 
 # ---
-# Email Backend (Mandrill)
+# Email Backend (Mandrill/Mailchimp)
 # ---
 
 EMAIL_BACKEND = 'anymail.backends.mandrill.EmailBackend'
