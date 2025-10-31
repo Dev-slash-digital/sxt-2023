@@ -3,7 +3,7 @@ from django.forms import model_to_dict
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from rest_framework import permissions, viewsets
-# from wailer.models import Email  # Temporarily commented out
+from wailer.models import Email
 
 from .models import Brand, Visit
 from .serializers import BrandSerializer
@@ -47,15 +47,13 @@ def visit_tree(request, tree_id):
 
             # On seventh visit, send the "raffle" email
             if visits_count == 7:
-                # TODO: Configure email system (Wailer/Mandrill)
-                # Email.send(
-                #     "raffleconfirmation",
-                #     dict(
-                #         email=request.user.email,
-                #         locale="es",
-                #     ),
-                # )
-                pass
+                Email.send(
+                    "raffleconfirmation",
+                    dict(
+                        email=request.user.email,
+                        locale="es",
+                    ),
+                )
 
     return JsonResponse(model_to_dict(brand))
 
