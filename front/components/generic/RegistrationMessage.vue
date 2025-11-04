@@ -2,7 +2,7 @@
     <div class="registration-message-container">
         <BigSXTLogo></BigSXTLogo>
         <p class="registration-message-text">
-            GRACIAS, SE HA REGISTRADO EN LA RUTA CON EL EMAIL
+            GRACIAS, SE HA REGISTRADO EN LA RUTA CON EL EMAIL<br>
             {{ registrationEmail }}
         </p>
         <YellowTree></YellowTree>
