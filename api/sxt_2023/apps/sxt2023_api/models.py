@@ -50,3 +50,34 @@ class Visit(UuidPkModel, models.Model):
                 fields=["brand", "user"], name="one_visit_per_brand_and_user"
             )
         ]
+
+
+class TreePageView(UuidPkModel, models.Model):
+    tree_id = models.UUIDField()
+    brand = models.ForeignKey(Brand, on_delete=models.CASCADE)
+    viewed_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Tree scan: {self.brand.name} at {self.viewed_at}"
+
+
+# Proxy models for admin statistics dashboards
+class InvitationsStats(User):
+    class Meta:
+        proxy = True
+        verbose_name = "Estadísticas de Invitaciones"
+        verbose_name_plural = "Estadísticas de Invitaciones"
+
+
+class TreeVisitsMatrix(Visit):
+    class Meta:
+        proxy = True
+        verbose_name = "Matriz de Visitas a Árboles"
+        verbose_name_plural = "Matriz de Visitas a Árboles"
+
+
+class TreeScansStats(TreePageView):
+    class Meta:
+        proxy = True
+        verbose_name = "Estadísticas de Escaneos"
+        verbose_name_plural = "Estadísticas de Escaneos"

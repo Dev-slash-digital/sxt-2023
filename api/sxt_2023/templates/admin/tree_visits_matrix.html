@@ -1,0 +1,84 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block content %}
+<div id="content-main">
+    <h1>{{ title }}</h1>
+    
+    <!-- Date Filter Form -->
+    <div class="module filtered" style="margin-bottom: 20px;">
+        <form method="get" style="padding: 15px;">
+            <div style="display: flex; gap: 15px; align-items: end;">
+                <div>
+                    <label for="filter">Filtro:</label>
+                    <select name="filter" id="filter" onchange="toggleCustomDates()">
+                        <option value="all" {% if filter_type == 'all' %}selected{% endif %}>Todo el tiempo</option>
+                        <option value="today" {% if filter_type == 'today' %}selected{% endif %}>Hoy</option>
+                        <option value="custom" {% if filter_type == 'custom' %}selected{% endif %}>Rango personalizado</option>
+                    </select>
+                </div>
+                
+                <div id="custom-dates" style="display: {% if filter_type == 'custom' %}flex{% else %}none{% endif %}; gap: 10px;">
+                    <div>
+                        <label for="date_from">Desde:</label>
+                        <input type="date" name="date_from" id="date_from" value="{{ date_from }}">
+                    </div>
+                    <div>
+                        <label for="date_to">Hasta:</label>
+                        <input type="date" name="date_to" id="date_to" value="{{ date_to }}">
+                    </div>
+                </div>
+                
+                <button type="submit" class="button">Aplicar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Matrix Table -->
+    <div class="module" style="overflow-x: auto;">
+        <table style="width: 100%; font-size: 12px;">
+            <thead>
+                <tr>
+                    <th style="position: sticky; left: 0; background: white; z-index: 10;">Árbol</th>
+                    {% for brand in user_brands %}
+                    <th style="text-align: center; min-width: 60px;">{{ brand }}</th>
+                    {% endfor %}
+                    <th style="text-align: center; font-weight: bold; background-color: #f8f8f8;">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in matrix_rows %}
+                <tr>
+                    <td style="position: sticky; left: 0; background: white; font-weight: bold;">{{ row.tree_brand }}</td>
+                    {% for value in row.values %}
+                    <td style="text-align: center;">{{ value }}</td>
+                    {% endfor %}
+                    <td style="text-align: center; font-weight: bold; background-color: #f8f8f8;">{{ row.total }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="{{ user_brands|length|add:2 }}" style="text-align: center; padding: 20px;">No hay datos disponibles</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr style="font-weight: bold; background-color: #f8f8f8;">
+                    <td style="position: sticky; left: 0; background: #f8f8f8;">TOTAL</td>
+                    {% for total in col_totals %}
+                    <td style="text-align: center;">{{ total }}</td>
+                    {% endfor %}
+                    <td style="text-align: center;">{{ grand_total }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script>
+function toggleCustomDates() {
+    const filter = document.getElementById('filter').value;
+    const customDates = document.getElementById('custom-dates');
+    customDates.style.display = filter === 'custom' ? 'flex' : 'none';
+}
+</script>
+{% endblock %}

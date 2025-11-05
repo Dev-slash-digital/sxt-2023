@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404
 from rest_framework import permissions, viewsets
 from wailer.models import Email
 
-from .models import Brand, Visit
+from .models import Brand, Visit, TreePageView
 from .serializers import BrandSerializer
 
 User = get_user_model()
@@ -34,6 +34,12 @@ def get_brands_info(request):
 
 def visit_tree(request, tree_id):
     brand = get_object_or_404(Brand, tree_id=tree_id)
+
+    # Track page view (scan URL access)
+    TreePageView.objects.create(
+        tree_id=tree_id,
+        brand=brand
+    )
 
     # Save visit to DB
     if request.user and request.user.is_authenticated:
