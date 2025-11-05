@@ -65,19 +65,19 @@ class TreePageView(UuidPkModel, models.Model):
 class InvitationsStats(User):
     class Meta:
         proxy = True
-        verbose_name = "Estadísticas de Invitaciones"
-        verbose_name_plural = "Estadísticas de Invitaciones"
+        verbose_name = "Invitations Statistics"
+        verbose_name_plural = "Invitations Statistics"
 
 
 class TreeVisitsMatrix(Visit):
     class Meta:
         proxy = True
-        verbose_name = "Matriz de Visitas a Árboles"
-        verbose_name_plural = "Matriz de Visitas a Árboles"
+        verbose_name = "Tree Visits Matrix"
+        verbose_name_plural = "Tree Visits Matrix"
 
 
 class TreeScansStats(TreePageView):
     class Meta:
         proxy = True
-        verbose_name = "Estadísticas de Escaneos"
-        verbose_name_plural = "Estadísticas de Escaneos"
+        verbose_name = "Tree Scans Statistics"
+        verbose_name_plural = "Tree Scans Statistics"

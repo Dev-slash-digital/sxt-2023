@@ -68,7 +68,6 @@ class InvitationsStatsAdmin(admin.ModelAdmin):
         
         context = {
             **self.admin_site.each_context(request),
-            'title': 'Estadísticas de Invitaciones',
             'stats': stats,
             'total': total_registrations,
             'filter_type': filter_type,
@@ -153,7 +152,6 @@ class TreeVisitsMatrixAdmin(admin.ModelAdmin):
         
         context = {
             **self.admin_site.each_context(request),
-            'title': 'Matriz de Visitas a Árboles',
             'user_brands': user_brands,
             'matrix_rows': matrix_rows,
             'col_totals': [col_totals.get(ub, 0) for ub in user_brands],
@@ -175,6 +173,15 @@ class TreeScansStatsAdmin(admin.ModelAdmin):
     
     def changelist_view(self, request, extra_context=None):
         from .models import TreePageView
+        from django.contrib import messages
+        from django.http import HttpResponseRedirect
+        
+        # Handle clear data action
+        if request.method == 'POST' and 'clear_data' in request.POST:
+            count = TreePageView.objects.all().count()
+            TreePageView.objects.all().delete()
+            messages.success(request, f'Successfully deleted {count} tree scan records.')
+            return HttpResponseRedirect(request.path)
         
         # Get filter parameters
         filter_type = request.GET.get('filter', 'all')
@@ -204,12 +211,13 @@ class TreeScansStatsAdmin(admin.ModelAdmin):
         
         # Calculate total
         total_scans = sum(item['total'] for item in stats)
+        total_records = TreePageView.objects.count()
         
         context = {
             **self.admin_site.each_context(request),
-            'title': 'Estadísticas de Escaneos de Árboles',
             'stats': stats,
             'total': total_scans,
+            'total_records': total_records,
             'filter_type': filter_type,
             'date_from': date_from,
             'date_to': date_to,
