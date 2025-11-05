@@ -36,7 +36,7 @@
     </mj-section>
     <mj-section background-url="/back/static/mails/background.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/hotel.png" alt="hotel" width="480px" align="center" />
+        <mj-image src="/back/static/mails/hotel-2.png" alt="hotel-2" width="480px" align="center" />
       </mj-column>
     </mj-section>
     <mj-section background-url="/back/static/mails/background.png" text-align="center">
