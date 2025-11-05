@@ -45,8 +45,8 @@ class InvitationsStatsAdmin(admin.ModelAdmin):
         date_from = request.GET.get('date_from', '')
         date_to = request.GET.get('date_to', '')
         
-        # Build query
-        queryset = User.objects.all()
+        # Build query - exclude users without brand
+        queryset = User.objects.filter(registration_brand__isnull=False)
         
         # Apply date filters
         if filter_type == 'today':
@@ -91,8 +91,10 @@ class TreeVisitsMatrixAdmin(admin.ModelAdmin):
         date_from = request.GET.get('date_from', '')
         date_to = request.GET.get('date_to', '')
         
-        # Build query
-        queryset = Visit.objects.select_related('brand', 'user__registration_brand')
+        # Build query - exclude visits from users without brand
+        queryset = Visit.objects.select_related('brand', 'user__registration_brand').filter(
+            user__registration_brand__isnull=False
+        )
         
         # Apply date filters
         if filter_type == 'today':
@@ -114,7 +116,7 @@ class TreeVisitsMatrixAdmin(admin.ModelAdmin):
         
         for visit in queryset:
             tree_brand = visit.brand.name
-            user_brand = visit.user.registration_brand.name if visit.user.registration_brand else "Sin marca"
+            user_brand = visit.user.registration_brand.name
             
             if tree_brand not in matrix:
                 matrix[tree_brand] = {}
@@ -132,7 +134,7 @@ class TreeVisitsMatrixAdmin(admin.ModelAdmin):
         
         # Get unique user brands (columns)
         user_brands = sorted(set(
-            visit.user.registration_brand.name if visit.user.registration_brand else "Sin marca"
+            visit.user.registration_brand.name
             for visit in queryset
         ))
         
