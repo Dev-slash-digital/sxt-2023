@@ -29,6 +29,7 @@
         <mj-image src="/back/static/mails/x2/enhorabuena.png" alt="enhorabuena, se ha registrado con éxito" width="660px" padding="0" align="center" />
       </mj-column>
     </mj-section>
+    {% if brand != 'SXT' %}
     <mj-section background-url="/back/static/mails/background.png" text-align="center">
       <mj-column width="100%">
         <mj-text padding="0 10% 0 10%" mj-class="font_normal" align="center">
@@ -36,6 +37,7 @@
         </mj-text>
       </mj-column>
     </mj-section>
+    {% endif %}
     <mj-section background-url="/back/static/mails/background.png" text-align="center">
       <mj-column width="100%">
         <mj-image src="/back/static/mails/x2/tree-divider.png" alt="divider" width="480px" align="center" />
