@@ -58,16 +58,21 @@ import CustomCarousel from "./CustomCarousel.vue";
 import Instagram from "./svg/Instagram.vue";
 
 const partnersPictures = [
-    ["/img/partners/Abanca.svg", ""],
-    ["/img/partners/BMW.svg", ""],
-    ["/img/partners/Naturgy.svg", ""],
-    ["/img/partners/Galeriascanalejas.svg", ""],
-    ["/img/partners/Christies.svg", ""],
+    ["/img/partners/abanca-privada.svg", ""],
+    ["/img/partners/bmw-2.svg", ""],
+    ["/img/partners/galeria-canejas.svg", ""],
+    ["/img/partners/cristies-2.svg", ""],
+    ["/img/partners/drago.svg", ""],
+    ["/img/partners/bang.svg", ""],
+    ["/img/partners/dobel.svg", ""],
+    ["/img/partners/naturgy-2.svg", ""],
+    ["/img/partners/orange-2.svg", ""],
+    ["/img/partners/o-a.svg", ""],
+    ["/img/partners/s-m.svg", ""],
 ];
 
 const randomPartnersPictures = [
-    ["/img/partners/Nuevo.svg", ""],
-    ["/img/partners/BANG-OLUFSEN.svg", ""],
+    ["/img/partners/c-b.svg", ""],
 ];
 
 shuffle(randomPartnersPictures);
