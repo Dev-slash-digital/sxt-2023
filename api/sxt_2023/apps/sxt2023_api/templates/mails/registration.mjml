@@ -19,18 +19,18 @@
   </mj-head>
   <mj-body background-color="white">
     <!--- {% load wailer %} -->
-    <mj-section padding="0" background-url="/back/static/mails/background.png">
+    <mj-section padding="0" background-url="/back/static/mails/background-2025.png">
       <mj-column width="100%" padding="100px 0 80px 0">
-        <mj-image src="/back/static/mails/x2/header.png" alt="logo xmas tree 2024" height="200px" width="164.812px" padding="0" align="center" />
+        <mj-image src="/back/static/mails/x2/header-2025.png" alt="logo xmas tree 2025" height="200px" width="164.812px" padding="0" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" padding-left="5px" padding-right="5px">
+    <mj-section background-url="/back/static/mails/background-2025.png" padding-left="5px" padding-right="5px">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/enhorabuena.png" alt="enhorabuena, se ha registrado con éxito" width="660px" padding="0" align="center" />
+        <mj-image src="/back/static/mails/x2/enhorabuena-2025.png" alt="enhorabuena, se ha registrado con éxito" width="660px" padding="0" align="center" />
       </mj-column>
     </mj-section>
     {% if brand != 'SXT' %}
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
         <mj-text padding="0 10% 0 10%" mj-class="font_normal" align="center">
           El árbol de Navidad solidario de {{ brand }} estará expuesto {{ address }} del 18 al 24 de noviembre dentro de la Ruta Solidarity Xmas Tree
@@ -38,47 +38,47 @@
       </mj-column>
     </mj-section>
     {% endif %}
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/tree-divider.png" alt="divider" width="480px" align="center" />
+        <mj-image src="/back/static/mails/x2/tree-divider-2025.png" alt="divider" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/trees.png" alt="imagen del mapa" width="480px" align="center" />
+        <mj-image src="/back/static/mails/x2/trees-2025.png" alt="imagen del mapa" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/people.png" alt="people" width="70px" align="center" />
+        <mj-image src="/back/static/mails/x2/people-2025.png" alt="people" width="70px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/hagala.png" alt="haga la ruta" width="480px" align="center" />
+        <mj-image src="/back/static/mails/x2/hagala-2025.png" alt="haga la ruta" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/valide1.png" alt="valide" width="480px" align="center" />
+        <mj-image src="/back/static/mails/x2/valide1-2025.png" alt="valide" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/valide2.png" alt="con 7 arboles" width="480px" align="center" />
+        <mj-image src="/back/static/mails/x2/valide2-2025.png" alt="con 7 arboles" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/hotel-2.png" alt="hotel-2" width="480px" align="center" />
+        <mj-image src="/back/static/mails/hotel-2-2025.png" alt="hotel-2" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/disfrute.png" alt="disfrute" width="480px" align="center" />
+        <mj-image src="/back/static/mails/x2/disfrute-2025.png" alt="disfrute" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
         <mj-text padding="0 10% 0 10%" mj-class="font_normal" font-family="Playfair Display" align="center">
           <a style="
@@ -91,19 +91,19 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/tree-divider.png" alt="divider" width="480px" align="center" />
+        <mj-image src="/back/static/mails/x2/tree-divider-2025.png" alt="divider" width="480px" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/header.png" alt="logo xmas tree 2023" height="200px" width="164.812px" padding="0" align="center" />
+        <mj-image src="/back/static/mails/x2/header-2025.png" alt="logo xmas tree 2025" height="200px" width="164.812px" padding="0" align="center" />
       </mj-column>
     </mj-section>
-    <mj-section background-url="/back/static/mails/background.png" text-align="center">
+    <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/x2/masinfo.png" alt="logo xmas tree 2023" alt="informacion" width="200px" align="center" />
+        <mj-image src="/back/static/mails/x2/masinfo-2025.png" alt="logo xmas tree 2025" alt="informacion" width="200px" align="center" />
       </mj-column>
     </mj-section>
     <mj-section background-url="/back/static/mails/background.png" text-align="center">
@@ -133,8 +133,8 @@
     </mj-section>
     <mj-section padding="0 25px 24px 25px" background-color="#612346">
       <mj-column width="100%" padding="0">
-        <mj-image src="/back/static/mails/x2/siganos.png" alt="siganos" width="281px" padding="32px 0 0 0" align="center" />
-        <mj-image href="https://www.instagram.com/solidarityxmastree/" src="/back/static/mails/x2/instagram.png" alt="instagram" width="30px" padding="8px 0 0 0" align="center" />
+        <mj-image src="/back/static/mails/x2/siganos-2025.png" alt="siganos" width="281px" padding="32px 0 0 0" align="center" />
+        <mj-image href="https://www.instagram.com/solidarityxmastree/" src="/back/static/mails/x2/instagram-2025.png" alt="instagram" width="30px" padding="8px 0 0 0" align="center" />
         <mj-divider padding="23px 0 23px 0" border-color="#E0E0E0" border-width="1px"></mj-divider>
       </mj-column>
     </mj-section>
@@ -157,7 +157,7 @@
           </mj-text>
         </mj-column>
         <mj-column width="20%" padding="16px 0 0 0">
-          <mj-image href="https://www.instagram.com/solidarityxmastree/" src="/back/static/mails/x2/with.png" alt="withlogo" width="36px" padding="0" align="left" />
+          <mj-image href="https://www.instagram.com/solidarityxmastree/" src="/back/static/mails/x2/with-2025.png" alt="withlogo" width="36px" padding="0" align="left" />
         </mj-column>
       </mj-group>
     </mj-section>
