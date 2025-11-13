@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
             model_name="user",
             name="email",
             field=models.EmailField(
+                db_collation="case_insensitive",
                 max_length=254,
                 unique=True,
                 verbose_name="email address",
