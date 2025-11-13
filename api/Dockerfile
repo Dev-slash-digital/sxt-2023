@@ -6,6 +6,8 @@ RUN modelw-docker install
 
 COPY --chown=user . .
 
+RUN rm -rf staticfiles
+
 RUN modelw-docker build
 
 CMD ["modelw-docker", "serve"]
