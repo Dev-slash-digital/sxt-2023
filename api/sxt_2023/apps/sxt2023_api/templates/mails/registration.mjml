@@ -70,7 +70,7 @@
     </mj-section>
     <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
       <mj-column width="100%">
-        <mj-image src="/back/static/mails/hotel-2-2025.png" alt="hotel-2" width="480px" align="center" />
+        <mj-image src="/back/static/mails/hotel-3-2025.png" alt="hotel-2" width="480px" align="center" />
       </mj-column>
     </mj-section>
     <mj-section background-url="/back/static/mails/background-2025.png" text-align="center">
