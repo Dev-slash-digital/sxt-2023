@@ -131,14 +131,14 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-section padding="0 25px 24px 25px" background-color="#612346">
+    <mj-section padding="0 25px 24px 25px" background-color="#094752">
       <mj-column width="100%" padding="0">
         <mj-image src="/back/static/mails/x2/siganos-2025.png" alt="siganos" width="281px" padding="32px 0 0 0" align="center" />
         <mj-image href="https://www.instagram.com/solidarityxmastree/" src="/back/static/mails/x2/instagram-2025.png" alt="instagram" width="30px" padding="8px 0 0 0" align="center" />
         <mj-divider padding="23px 0 23px 0" border-color="#E0E0E0" border-width="1px"></mj-divider>
       </mj-column>
     </mj-section>
-    <mj-section padding="0" background-color="#612346">
+    <mj-section padding="0" background-color="#094752">
       <mj-column width="100%" padding="0">
         <mj-text padding="0 10px 0 10px" mj-class="font_footer_small">
           <span style="font-weight: 500; font-size=12px;">
@@ -149,7 +149,7 @@
         </mj-text>
       </mj-column>
     </mj-section>
-    <mj-section text-align="center" padding="0 0 24px 0" background-color="#612346">
+    <mj-section text-align="center" padding="0 0 24px 0" background-color="#094752">
       <mj-group width="50%" vertical-align="middle">
         <mj-column width="80%">
           <mj-text padding="16px 0 0 0" mj-class="font_footer_small">Partner tecnológico:
