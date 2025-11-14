@@ -14,7 +14,7 @@ django.setup()
 from smtplib import SMTPException
 
 from sxt_2023.apps.people.models import User
-from sxt_2023.apps.sxt2023_api.emails import Email
+from wailer.email import Email
 
 
 def send_test_email():
