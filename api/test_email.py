@@ -14,7 +14,7 @@ django.setup()
 from smtplib import SMTPException
 
 from sxt_2023.apps.people.models import User
-from wailer.email import Email
+from wailer.models import Email
 
 
 def send_test_email():
@@ -39,8 +39,9 @@ def send_test_email():
                 {
                     "brand": brand_name,
                     "address": address,
+                    "email": email,
+                    "locale": "es",
                 },
-                to=[email],
             )
             print(f"Correo enviado exitosamente a {email}")
 
