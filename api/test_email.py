@@ -22,11 +22,12 @@ def send_test_email():
     """Envía un email de prueba a una lista de correos."""
     
     emails = [
-        "jean.martial@slash-experience.com",
-        "jean.martial@slash-digital.io",
         "david.ortiz@slash-digital.io",
         "paypal.trabajalatino@gmail.com",
         "david.or2018@gmail.com",
+        "martialjm@gmail.com",
+        "Jean.martial@slash-digital.io",
+        "Jean.martial@slash-experience.com ",
     ]
 
     for email in emails:
