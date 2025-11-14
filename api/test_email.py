@@ -32,7 +32,7 @@ def send_test_email():
 
     for email in emails:
         try:
-            user = User.objects.get(email=email)
+            user = User.objects.get(email__iexact=email)
             brand = user.registration_brand
             address = brand.postal_address if brand else "Dirección no especificada"
             brand_name = brand.name if brand else "SXT"
