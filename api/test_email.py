@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Script de prueba para enviar un email usando Wailer
+Script de prueba para enviar un email usando MAILDRILL
 Uso: python test_email.py
 """
 
@@ -11,41 +11,45 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sxt_2023.django.settings')
 django.setup()
 
-from wailer.models import Email
+from smtplib import SMTPException
+
+from sxt_2023.apps.people.models import User
+from sxt_2023.apps.sxt2023_api.emails import Email
 
 
 def send_test_email():
-    """Envía un email de prueba a david.ortiz@slash-digital.io"""
+    """Envía un email de prueba a una lista de correos."""
     
-    print("🚀 Enviando email de prueba...")
-    print(f"📧 Destinatario: david.ortiz@slash-digital.io")
-    print(f"📝 Tipo: registration")
-    
-    try:
-        # Enviar email de registro de prueba
-        Email.send(
-            "registration",
-            {
-                "email": "david.ortiz@slash-digital.io",
-                "locale": "es",
-                "brand": "Test Brand",
-                "address": "Calle Test 123, Madrid",
-            },
-        )
-        
-        print("✅ Email enviado exitosamente!")
-        print("\n📊 Verifica:")
-        print("   1. Tu bandeja de entrada en david.ortiz@slash-digital.io")
-        print("   2. La carpeta de spam")
-        print("   3. Los logs de Mailgun en https://app.mailgun.com/")
-        
-    except Exception as e:
-        print(f"❌ Error al enviar email: {e}")
-        print("\n🔍 Verifica:")
-        print("   1. Que el API key de Mailgun sea correcto")
-        print("   2. Que el dominio esté verificado en Mailgun")
-        print("   3. Que las dependencias estén instaladas (wailer, anymail)")
-        raise
+    emails = [
+        "jean.martial@slash-experience.com",
+        "david.ortiz@slash-digital.io",
+        "paypal.trabajalatino@gmail.com",
+    ]
+
+    for email in emails:
+        try:
+            user = User.objects.get(email=email)
+            brand = user.registration_brand
+            address = brand.postal_address if brand else "Dirección no especificada"
+            brand_name = brand.name if brand else "SXT"
+
+            print(f"Enviando correo a {email} para la marca {brand_name}...")
+            Email.send(
+                "registration_confirmation",
+                {
+                    "brand": brand_name,
+                    "address": address,
+                },
+                to=[email],
+            )
+            print(f"Correo enviado exitosamente a {email}")
+
+        except User.DoesNotExist:
+            print(f"Usuario con email {email} no encontrado. Saltando...")
+        except SMTPException as e:
+            print(f"Error al enviar correo a {email}: {e}")
+        except Exception as e:
+            print(f"Ocurrió un error inesperado con {email}: {e}")
 
 
 if __name__ == "__main__":
