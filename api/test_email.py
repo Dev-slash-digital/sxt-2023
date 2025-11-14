@@ -23,8 +23,10 @@ def send_test_email():
     
     emails = [
         "jean.martial@slash-experience.com",
+        "jean.martial@slash-digital.io",
         "david.ortiz@slash-digital.io",
         "paypal.trabajalatino@gmail.com",
+        "david.or2018@gmail.com",
     ]
 
     for email in emails:
