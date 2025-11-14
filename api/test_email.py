@@ -6,6 +6,7 @@ Uso: python test_email.py
 
 import os
 import django
+import traceback
 
 # Setup Django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sxt_2023.django.settings')
@@ -50,7 +51,8 @@ def send_test_email():
         except SMTPException as e:
             print(f"Ocurrió un error de SMTP con {email}: {e}")
         except Exception as e:
-            print(f"Ocurrió un error inesperado con {email}: {e}")
+            print(f"Ocurrió un error inesperado con {email}:")
+            traceback.print_exc()
 
 
 if __name__ == "__main__":
