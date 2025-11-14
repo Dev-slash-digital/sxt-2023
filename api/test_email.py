@@ -36,7 +36,7 @@ def send_test_email():
 
             print(f"Enviando correo a {email} para la marca {brand_name}...")
             Email.send(
-                "registration_confirmation",
+                "registration",
                 {
                     "brand": brand_name,
                     "address": address,
