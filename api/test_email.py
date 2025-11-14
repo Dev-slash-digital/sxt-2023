@@ -48,7 +48,7 @@ def send_test_email():
         except User.DoesNotExist:
             print(f"Usuario con email {email} no encontrado. Saltando...")
         except SMTPException as e:
-            print(f"Error al enviar correo a {email}: {e}")
+            print(f"Ocurrió un error de SMTP con {email}: {e}")
         except Exception as e:
             print(f"Ocurrió un error inesperado con {email}: {e}")
 
